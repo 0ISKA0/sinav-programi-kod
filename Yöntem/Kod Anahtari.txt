@@ -1,0 +1,86 @@
+SINAV PROGRAMI - KOD ANAHTARI
+İstanbul Esenyurt Üniversitesi - İşletme ve Yönetim Bilimleri Fakültesi
+
+Kodlar BÖLÜM-YARIYIL biçimindedir. Örnek: YBS-1
+
+BÖLÜM KISALTMALARI
+SBUİ  = Siyaset Bilimi ve Uluslararası İlişkiler (Türkçe)
+PSIR  = Political Science and International Relations (İngilizce)
+İŞL   = İşletme (Türkçe)
+BUS   = Business Administration (İngilizce)
+UTF   = Uluslararası Ticaret ve Finansman
+LOJ   = Lojistik Yönetimi
+HAV   = Havacılık Yönetimi
+YBS   = Yönetim Bilişim Sistemleri
+ECF   = Economics and Finance (İngilizce)
+ETİC  = Elektronik Ticaret ve Yönetimi
+
+YARIYIL KARŞILIKLARI (BAHAR DÖNEMİ)
+2 = 2. yarıyıl (1. sınıf bahar)
+4 = 4. yarıyıl (2. sınıf bahar)
+6 = 6. yarıyıl (3. sınıf bahar)
+8 = 8. yarıyıl (4. sınıf bahar)
+
+ÖZEL KODLAR
+HAVUZ2 (6. yy) = Fakülte Seçmeli Havuzu 2 - 6. yarıyılda açılan fakülte seçmelileri
+HAVUZ4 (8. yy) = Fakülte Seçmeli Havuzu 4 - 8. yarıyılda açılan fakülte seçmelileri
+Bu iki kod tek bir bölüme ait değildir; birden çok bölümün öğrencisi alır.
+
+TÜM KODLARIN LİSTESİ
+SBUİ-2 = Siyaset Bilimi ve Uluslararası İlişkiler 2. yarıyıl
+SBUİ-4 = Siyaset Bilimi ve Uluslararası İlişkiler 4. yarıyıl
+SBUİ-6 = Siyaset Bilimi ve Uluslararası İlişkiler 6. yarıyıl
+SBUİ-8 = Siyaset Bilimi ve Uluslararası İlişkiler 8. yarıyıl
+PSIR-2 = Political Science and International Relations 2. yarıyıl
+PSIR-4 = Political Science and International Relations 4. yarıyıl
+PSIR-6 = Political Science and International Relations 6. yarıyıl
+PSIR-8 = Political Science and International Relations 8. yarıyıl
+İŞL-2  = İşletme 2. yarıyıl
+İŞL-4  = İşletme 4. yarıyıl
+İŞL-6  = İşletme 6. yarıyıl
+İŞL-8  = İşletme 8. yarıyıl
+BUS-2  = Business Administration 2. yarıyıl
+BUS-4  = Business Administration 4. yarıyıl
+BUS-6  = Business Administration 6. yarıyıl
+BUS-8  = Business Administration 8. yarıyıl
+UTF-2  = Uluslararası Ticaret ve Finansman 2. yarıyıl
+UTF-4  = Uluslararası Ticaret ve Finansman 4. yarıyıl
+UTF-6  = Uluslararası Ticaret ve Finansman 6. yarıyıl
+UTF-8  = Uluslararası Ticaret ve Finansman 8. yarıyıl
+LOJ-2  = Lojistik Yönetimi 2. yarıyıl
+LOJ-4  = Lojistik Yönetimi 4. yarıyıl
+LOJ-6  = Lojistik Yönetimi 6. yarıyıl
+LOJ-8  = Lojistik Yönetimi 8. yarıyıl
+HAV-2  = Havacılık Yönetimi 2. yarıyıl
+HAV-4  = Havacılık Yönetimi 4. yarıyıl
+HAV-6  = Havacılık Yönetimi 6. yarıyıl
+HAV-8  = Havacılık Yönetimi 8. yarıyıl
+YBS-2  = Yönetim Bilişim Sistemleri 2. yarıyıl
+YBS-4  = Yönetim Bilişim Sistemleri 4. yarıyıl
+YBS-6  = Yönetim Bilişim Sistemleri 6. yarıyıl
+YBS-8  = Yönetim Bilişim Sistemleri 8. yarıyıl
+ECF-2  = Economics and Finance 2. yarıyıl
+ECF-4  = Economics and Finance 4. yarıyıl
+ECF-6  = Economics and Finance 6. yarıyıl
+ETİC-2 = Elektronik Ticaret ve Yönetimi 2. yarıyıl
+ETİC-4 = Elektronik Ticaret ve Yönetimi 4. yarıyıl
+ETİC-6 = Elektronik Ticaret ve Yönetimi 6. yarıyıl
+
+NOT: Bahar talep dosyasında ECF (Economics and Finance) ve ETİC (Elektronik Ticaret
+ve Yönetimi) bölümlerinde 8. yarıyıl dersi bulunmamaktadır.
+
+DERSLİKLER VE KAPASİTELERİ
+6A1 = 24    6A2 = 24    6D1 = 15    6D3 = 15    6D4 = 20    6D5 = 20
+3A1 = 80    3A3 = 80    3A4 = 40    3A5 = 70    3A6 = 60
+LAB = 40 (Bilgisayar laboratuvarı)
+Toplam oturma kapasitesi: 488
+
+SINAV TAKVİMİ - 2025-2026 Bahar Dönemi İYBF Vize Sınavı (deneme v2)
+06.04.2026 Pazartesi
+07.04.2026 Salı
+08.04.2026 Çarşamba
+09.04.2026 Perşembe
+10.04.2026 Cuma
+Her sınav saat başında başlar, 50 dakika sürer:
+09:00-09:50, 10:00-10:50, 11:00-11:50, 12:00-12:50, 13:00-13:50,
+14:00-14:50, 15:00-15:50, 16:00-16:50, 17:00-17:50

@@ -1,0 +1,17 @@
+# --- Kişi bilgisi, şifre ve dönem verisi: GitHub'a YÜKLENMEZ ---
+Belgeler/
+Çıktılar/
+Yöntem/kod/yedek/
+Yöntem/kod/donem_ayarlari.py
+Yöntem/kod/*.json
+Yöntem/kod/rapor.txt
+Yöntem/HTML Şablonu (eski veriyle).html
+Yöntem/Sinav Programi Hazirlama Rehberi.md
+
+# Dönem çalışma şablonları (kök klasördeki bütün Excel dosyaları); boş şablon Yöntem/ içinde
+/*.xlsx
+
+# Geçici dosyalar
+~$*
+__pycache__/
+*.pyc
