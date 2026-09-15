@@ -405,6 +405,12 @@ NOSCRIPT_UYARI = (
     '(WhatsApp, Drive, Dosyalar vb.). Lütfen dosyayı Chrome veya Safari gibi bir tarayıcıda açın; şifre ancak '
     'tarayıcıda çalışır.</p></noscript>')
 
+JS_UYARI = (
+    '      <p class="access-error" id="js-uyari" style="color:#79520c;background:#fff7df;padding:10px;border-radius:8px">'
+    '<strong>Şifre çalışmıyorsa:</strong> dosya bir önizleme ekranında açılmış olabilir (WhatsApp, Dosyalar, Drive). '
+    'Android: sağ üstteki menüden <em>Chrome ile aç</em>. iPhone: yerel dosya Safari\'de açılamaz; bağlantı (web adresi) '
+    'üzerinden açın.</p>')
+
 BIRIM_SIFRE = BIRIM_SIFRESI   # donem_ayarlari.py
 BIRIM_BOLUMU = """    <section class="page" id="page-unit" role="tabpanel" aria-labelledby="tab-unit" hidden>
       <div class="page-heading">
@@ -520,7 +526,11 @@ def web_sitesi(dersler, program):
         ('if (accessPassword.value === ACCESS_PASSWORD) {',
          'if (accessPassword.value.replace(/\\s+/g, "") === ACCESS_PASSWORD) {'),
         ('      <p class="access-error" id="access-error" role="alert" aria-live="polite"></p>',
-         '      <p class="access-error" id="access-error" role="alert" aria-live="polite"></p>\n' + NOSCRIPT_UYARI),
+         '      <p class="access-error" id="access-error" role="alert" aria-live="polite"></p>\n' + NOSCRIPT_UYARI + '\n' + JS_UYARI),
+        # JavaScript çalışırsa uyarıyı gizle (önizleme uygulamaları <noscript> göstermeyebilir)
+        ('const accessError = document.querySelector("#access-error");',
+         'const accessError = document.querySelector("#access-error");\n'
+         '    (function () { var u = document.getElementById("js-uyari"); if (u) u.hidden = true; })();'),
         # gözetmenlerin kaç sınava girdiği herkese açık sekmede görünmesin
         ("'<span>' + esc(name) + '</span><span class=\"person-count\">' + counts[name] + '</span>' +",
          "'<span>' + esc(name) + '</span>' + (config.type === \"teacher\" ? '<span class=\"person-count\">' + counts[name] + '</span>' : '') +"),
