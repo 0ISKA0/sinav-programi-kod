@@ -488,52 +488,80 @@ def birim_tablosu_html(data):
             "</tr></thead><tbody>" + "".join(satirlar) + "</tbody></table></div>")
 
 
-def sifrele(metin_, sifre, tur=150000):
-    """PBKDF2-SHA256 anahtar + SHA-256 sayaç akışı ile XOR; HMAC ile şifre doğrulama. (Tarayıcıda Web Crypto ile çözülür.)"""
-    import base64, hashlib, hmac
-    tuz = os.urandom(16)
+def sifrele(metin_, sifre, tur=250000):
+    """AES-256-GCM; anahtar PBKDF2-SHA256 ile şifreden türetilir. Tarayıcıda Web Crypto ile çözülür.
+    Dosyada şifrenin kendisi bulunmaz; yanlış şifrede çözme başarısız olur."""
+    import base64, hashlib
+    from cryptography.hazmat.primitives.ciphers.aead import AESGCM
+    tuz, iv = os.urandom(16), os.urandom(12)
     anahtar = hashlib.pbkdf2_hmac("sha256", sifre.encode(), tuz, tur, dklen=32)
-    veri = metin_.encode("utf-8")
-    akis = b"".join(hashlib.sha256(anahtar + i.to_bytes(4, "big")).digest() for i in range(len(veri) // 32 + 1))
-    sifreli = bytes(x ^ y for x, y in zip(veri, akis))
-    etiket = hmac.new(anahtar, sifreli, hashlib.sha256).digest()[:16]
+    veri = AESGCM(anahtar).encrypt(iv, metin_.encode("utf-8"), None)
     b64 = lambda b: base64.b64encode(b).decode()
-    return {"tuz": b64(tuz), "veri": b64(sifreli), "etiket": b64(etiket), "tur": tur}
+    return {"tuz": b64(tuz), "iv": b64(iv), "veri": b64(veri), "tur": tur}
 
+
+# tarayıcıda paket çözme (internet sürümünde sayfanın ilk script'ine eklenir)
+PAKET_COZ_JS = r"""    async function paketCoz(paket, sifre) {
+      function b64(s) { return Uint8Array.from(atob(s), function (c) { return c.charCodeAt(0); }); }
+      try {
+        const temel = await crypto.subtle.importKey("raw", new TextEncoder().encode(sifre), "PBKDF2", false, ["deriveKey"]);
+        const anahtar = await crypto.subtle.deriveKey(
+          { name: "PBKDF2", salt: b64(paket.tuz), iterations: paket.tur, hash: "SHA-256" },
+          temel, { name: "AES-GCM", length: 256 }, false, ["decrypt"]);
+        const acik = await crypto.subtle.decrypt({ name: "AES-GCM", iv: b64(paket.iv) }, anahtar, b64(paket.veri));
+        return new TextDecoder().decode(acik);
+      } catch (hata) {
+        return null;   // yanlış şifre
+      }
+    }
+    function sifreCozDestekli() { return !!(window.crypto && crypto.subtle); }
+    const SIFRE_DESTEK_YOK = "Bu tarayıcı şifreli sayfayı açamıyor. Sayfayı Chrome veya Safari'de, https ile başlayan bağlantıdan açın.";
+"""
 
 BIRIM_JS_SIFRELI = r"""    (function () {
       const PAKET = __PAKET__;
       const form = $("#unit-form"), input = $("#unit-password"), error = $("#unit-error"), content = $("#unit-content");
-      function b64(s) { return Uint8Array.from(atob(s), function (c) { return c.charCodeAt(0); }); }
-      async function coz(sifre) {
-        const enc = new TextEncoder();
-        const temel = await crypto.subtle.importKey("raw", enc.encode(sifre), "PBKDF2", false, ["deriveBits"]);
-        const anahtar = new Uint8Array(await crypto.subtle.deriveBits(
-          { name: "PBKDF2", salt: b64(PAKET.tuz), iterations: PAKET.tur, hash: "SHA-256" }, temel, 256));
-        const veri = b64(PAKET.veri);
-        const hk = await crypto.subtle.importKey("raw", anahtar, { name: "HMAC", hash: "SHA-256" }, false, ["sign"]);
-        const etiket = new Uint8Array(await crypto.subtle.sign("HMAC", hk, veri)).slice(0, 16);
-        const beklenen = b64(PAKET.etiket);
-        if (etiket.some(function (x, i) { return x !== beklenen[i]; })) return null;
-        const cikti = new Uint8Array(veri.length);
-        for (let i = 0; i * 32 < veri.length; i++) {
-          const blok = new Uint8Array(36); blok.set(anahtar); new DataView(blok.buffer).setUint32(32, i);
-          const akis = new Uint8Array(await crypto.subtle.digest("SHA-256", blok));
-          for (let j = 0; j < 32 && i * 32 + j < veri.length; j++) cikti[i * 32 + j] = veri[i * 32 + j] ^ akis[j];
-        }
-        return new TextDecoder().decode(cikti);
-      }
       form.addEventListener("submit", async function (event) {
         event.preventDefault();
-        if (!(window.crypto && crypto.subtle)) { error.textContent = "Bu tarayıcı şifre çözmeyi desteklemiyor (Chrome/Safari'de, https adresinden açın)."; return; }
+        if (!sifreCozDestekli()) { error.textContent = SIFRE_DESTEK_YOK; return; }
         error.textContent = "Kontrol ediliyor…";
-        const tablo = await coz(input.value.replace(/\s+/g, ""));
+        const tablo = await paketCoz(PAKET, input.value.replace(/\s+/g, ""));
         if (tablo === null) { error.textContent = "Şifre hatalı."; return; }
         error.textContent = ""; input.value = "";
         content.innerHTML = tablo; content.hidden = false; form.hidden = true;
       });
     })();
 """
+
+# internet sürümü: sayfa şifresi = bütün verinin şifresi
+GIRIS_ESKI = """    accessForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      if (accessPassword.value.replace(/\\s+/g, "") === ACCESS_PASSWORD) {
+        try { sessionStorage.setItem(ACCESS_SESSION_KEY, "granted"); } catch (error) {}
+        accessError.textContent = "";
+        accessPassword.value = "";
+        unlockPage();
+        return;
+      }
+      accessError.textContent = "Şifre hatalı. Lütfen tekrar deneyin.";
+      accessPassword.select();
+    });"""
+GIRIS_SIFRELI = """    accessForm.addEventListener("submit", async function (event) {
+      event.preventDefault();
+      if (!sifreCozDestekli()) { accessError.textContent = SIFRE_DESTEK_YOK; return; }
+      accessError.textContent = "Açılıyor…";
+      const acik = await paketCoz(DATA_PAKET, accessPassword.value.replace(/\\s+/g, ""));
+      if (acik === null) {
+        accessError.textContent = "Şifre hatalı. Lütfen tekrar deneyin.";
+        accessPassword.select();
+        return;
+      }
+      DATA = JSON.parse(acik);
+      accessError.textContent = "";
+      accessPassword.value = "";
+      initApp();
+      unlockPage();
+    });"""
 
 
 def web_sitesi(dersler, program):
@@ -627,16 +655,39 @@ def web_sitesi(dersler, program):
         tam = tam.replace(a, b)
     open(SITE_HTML, "w", encoding="utf-8").write(tam)
 
-    # 2) internet sürümü (GitHub Pages): Birim sekmesi VAR ama tablosu şifreli; şifrenin kendisi dosyada yok
+    # 2) internet sürümü (GitHub Pages): BÜTÜN veri sayfa şifresiyle, Birim tablosu birim şifresiyle şifreli.
+    #    Dosyada ne şifreler ne isimler açık yazılıdır; doğru şifre girilince tarayıcı çözer.
     tablo_html = birim_tablosu_html(data)
-    sifreli_js = BIRIM_JS_SIFRELI.replace("__PAKET__", json.dumps(sifrele(tablo_html, BIRIM_SIFRESI)))
+    birim_js = BIRIM_JS_SIFRELI.replace("__PAKET__", json.dumps(sifrele(tablo_html, BIRIM_SIFRESI)))
+    veri_paketi = json.dumps(sifrele(json.dumps(data, ensure_ascii=False), SITE_SIFRESI))
     yayin = h
-    for a, b in birim_degis[:3] + [('    $("#schedule-summary").textContent', sifreli_js + '    $("#schedule-summary").textContent')]:
-        assert yayin.count(a) == 1, a[:50]
-        yayin = yayin.replace(a, b)
-    yayin = yayin.replace('<meta charset="utf-8">',
-                          '<meta charset="utf-8">\n  <meta name="robots" content="noindex, nofollow">', 1)
-    assert "UNIT_PASSWORD" not in yayin and "Toplam görev" not in yayin
+    bas = yayin.index("const DATA = "); son = yayin.index(";\n", bas)
+    yayin = yayin[:bas] + "let DATA = null;   // şifre girilince DATA_PAKET çözülür" + yayin[son + 1:]
+    son_script = yayin.rindex("  </script>")
+    yayin = yayin[:son_script] + "    }\n" + yayin[son_script:]          # initApp kapanışı
+    internet_degis = birim_degis[:3] + [
+        ('    $("#schedule-summary").textContent', birim_js + "    function initApp() {\n" + '    $("#schedule-summary").textContent'),
+        ("  <script>\n", "  <script>\n" + PAKET_COZ_JS, 1),
+        (f'const ACCESS_PASSWORD = "{SITE_SIFRESI}";', f"const DATA_PAKET = {veri_paketi};"),
+        ('if (sessionStorage.getItem(ACCESS_SESSION_KEY) === "granted") unlockPage();',
+         "/* internet sürümü: her açılışta şifre sorulur */"),
+        (GIRIS_ESKI, GIRIS_SIFRELI),
+        ('<meta charset="utf-8">', '<meta charset="utf-8">\n  <meta name="robots" content="noindex, nofollow">'),
+    ]
+    for d in internet_degis:
+        a, b = d[0], d[1]
+        adet = d[2] if len(d) > 2 else None
+        if adet is None:
+            assert yayin.count(a) == 1, a[:60]
+            yayin = yayin.replace(a, b)
+        else:
+            assert yayin.count(a) >= 1, a[:60]
+            yayin = yayin.replace(a, b, adet)
+    # dosyada açık yazılı şifre ve kişi adı kalmamalı (alt satırdaki geliştirici teşekkürü hariç)
+    tesekkur = re.search(r'<div class="footer-inner">.*?</div>', yayin, re.S).group(0)
+    kontrol = yayin.replace(tesekkur, "")
+    for yasak in [SITE_SIFRESI, BIRIM_SIFRESI, "UNIT_PASSWORD", "Toplam görev"] + data["proctors"] + data["teachers"][:40]:
+        assert yasak not in kontrol, f"internet sürümünde açık kaldı: {yasak}"
     os.makedirs(os.path.dirname(SITE_YAYIN_HTML), exist_ok=True)
     open(SITE_YAYIN_HTML, "w", encoding="utf-8").write(yayin)
     return len(exams), len(assignments)

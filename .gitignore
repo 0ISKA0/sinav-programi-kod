@@ -15,3 +15,6 @@ Yöntem/Sinav Programi Hazirlama Rehberi.md
 ~$*
 __pycache__/
 *.pyc
+
+# yerel test ayarı
+.claude/
