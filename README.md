@@ -14,4 +14,8 @@ Kullanım ve kurallar: [Yöntem/REHBER.md](Yöntem/REHBER.md)
 **Gizlilik:** `Belgeler/`, `Çıktılar/`, çalışma şablonları, üretilen veri dosyaları ve
 `Yöntem/kod/donem_ayarlari.py` (şifreler, kişi bilgileri) bu depoya yüklenmez — bkz. `.gitignore`.
 
-Gereksinim: Python 3, `openpyxl` (PDF için Windows'ta Microsoft Excel).
+Gereksinim: Python 3, `openpyxl`, `cryptography` (şifreli site için) — `pip install openpyxl cryptography`;
+PDF için Windows'ta Microsoft Excel.
+
+Web sitesi ayrı bir depoda yayınlanır: `iybf-sinav/iybf-sinav.github.io` → https://iybf-sinav.github.io/
+(`3_formlari_uret.py` çıktısı `Çıktılar/GitHub Pages/index.html` o depoya yüklenir).
