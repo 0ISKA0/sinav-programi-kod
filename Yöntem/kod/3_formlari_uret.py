@@ -316,6 +316,7 @@ def gozetmen_cizelgesi(dersler, program):
 # ================================================================ 4) web sitesi
 SITE_SABLON = os.path.join(KOK, "Yöntem", "site_sablonu.html")   # verisiz, şifresiz şablon
 SITE_HTML = os.path.join(CIKTI, SITE_DOSYASI)
+SITE_YAYIN_HTML = os.path.join(CIKTI, "GitHub Pages", "index.html")   # internete konacak sürüm
 BOLUMLER = [("SBUİ", "Siyaset Bilimi ve Uluslararası İlişkiler", "Türkçe"),
             ("PSIR", "Political Science and International Relations", "English"),
             ("İŞL", "İşletme", "Türkçe"), ("BUS", "Business Administration", "English"),
@@ -537,7 +538,13 @@ def web_sitesi(dersler, program):
         ('detail.innerHTML = selectionHeader(title, items.length, "sınav") +',
          'detail.innerHTML = selectionHeader(title, config.type === "teacher" ? items.length : "", '
          'config.type === "teacher" ? "sınav" : "Görevli olduğu sınavlar") +'),
-        # şifreli Birim sekmesi
+    ]
+    for a, b in degis:
+        assert h.count(a) == 1, a[:50]
+        h = h.replace(a, b)
+
+    # 1) tam sürüm (bilgisayarda kalır): şifreli Birim sekmesi dahil
+    birim_degis = [
         ('data-page="proctors">Gözetmenler</button>',
          'data-page="proctors">Gözetmenler</button>\n      <button class="tab-button" id="tab-unit" role="tab" '
          'aria-controls="page-unit" aria-selected="false" data-page="unit">Birim</button>'),
@@ -546,10 +553,18 @@ def web_sitesi(dersler, program):
          'const hashes = { schedule: "sinav-programi", teachers: "ogretim-uyeleri", proctors: "gozetmenler", unit: "birim" };'),
         ('    $("#schedule-summary").textContent', BIRIM_JS + '    $("#schedule-summary").textContent'),
     ]
-    for a, b in degis:
-        assert h.count(a) == 1, a[:50]
-        h = h.replace(a, b)
-    open(SITE_HTML, "w", encoding="utf-8").write(h)
+    tam = h
+    for a, b in birim_degis:
+        assert tam.count(a) == 1, a[:50]
+        tam = tam.replace(a, b)
+    open(SITE_HTML, "w", encoding="utf-8").write(tam)
+
+    # 2) internet sürümü (GitHub Pages): Birim sekmesi ve birim şifresi YOK, arama motorlarına kapalı
+    yayin = h.replace('<meta charset="utf-8">',
+                      '<meta charset="utf-8">\n  <meta name="robots" content="noindex, nofollow">', 1)
+    assert "UNIT_PASSWORD" not in yayin and BIRIM_SIFRESI not in yayin.replace(SITE_SIFRESI, "")
+    os.makedirs(os.path.dirname(SITE_YAYIN_HTML), exist_ok=True)
+    open(SITE_YAYIN_HTML, "w", encoding="utf-8").write(yayin)
     return len(exams), len(assignments)
 
 
@@ -566,4 +581,5 @@ if __name__ == "__main__":
     yuk = gozetmen_cizelgesi(dersler, program)
     print("Gözetmenlik çizelgesi:", sum(yuk.values()), "görev |", ", ".join(f"{k.split()[0]} {v}" for k, v in yuk.items()))
     ne, na = web_sitesi(dersler, program)
-    print(f"Web sitesi: {ne} sınav, {na} gözetmen ataması → {os.path.basename(SITE_HTML)}")
+    print(f"Web sitesi: {ne} sınav, {na} gözetmen ataması → {os.path.basename(SITE_HTML)} (tam) + "
+          f"GitHub Pages/index.html (internet sürümü, Birim sekmesiz)")
