@@ -422,7 +422,7 @@ BIRIM_BOLUMU = """    <section class="page" id="page-unit" role="tabpanel" aria-
       </div>
       <form class="unit-lock" id="unit-form">
         <label class="access-label" for="unit-password">Birim şifresi</label>
-        <input class="access-input" id="unit-password" type="password" inputmode="numeric" autocomplete="off">
+        <input class="access-input" id="unit-password" type="password" autocapitalize="off" autocorrect="off" spellcheck="false" autocomplete="off">
         <button class="access-submit" type="submit">Göster</button>
         <p class="access-error" id="unit-error" role="alert" aria-live="polite"></p>
       </form>
