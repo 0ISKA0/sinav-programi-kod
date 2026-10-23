@@ -1,0 +1,1158 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>2026-2027 Güz Dönemi Vize Sınav Programı | İşletme ve Yönetim Bilimleri Fakültesi</title>
+  <style>
+    :root {
+      --navy: #102a43;
+      --navy-2: #1d486d;
+      --blue: #1769aa;
+      --blue-soft: #eaf4fb;
+      --ink: #172b3a;
+      --muted: #60758a;
+      --line: #dce5ec;
+      --surface: #ffffff;
+      --canvas: #f4f7f9;
+      --warning: #79520c;
+      --warning-bg: #fff7df;
+      --radius: 16px;
+      --shadow: 0 8px 28px rgba(19, 47, 76, .08);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--canvas);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+    }
+
+    body.access-locked { overflow: hidden; }
+
+    body.access-locked > :not(.access-gate):not(script) { visibility: hidden; }
+
+    .access-gate {
+      position: fixed;
+      z-index: 1000;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background: linear-gradient(135deg, #0d253d 0%, #174f78 100%);
+    }
+
+    body:not(.access-locked) .access-gate { display: none; }
+
+    .access-card {
+      width: min(100%, 410px);
+      padding: 30px;
+      border: 1px solid rgba(255, 255, 255, .22);
+      border-radius: 20px;
+      background: #fff;
+      box-shadow: 0 22px 60px rgba(2, 17, 31, .32);
+    }
+
+    .access-card h2 {
+      margin: 0;
+      color: var(--navy);
+      font-size: 1.45rem;
+    }
+
+    .access-card p {
+      margin: 7px 0 20px;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .access-label {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--navy);
+      font-size: .82rem;
+      font-weight: 800;
+    }
+
+    .access-input {
+      width: 100%;
+      padding: 11px 12px;
+      border: 1px solid #cddae3;
+      border-radius: 10px;
+      outline: none;
+    }
+
+    .access-input:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(23, 105, 170, .12);
+    }
+
+    .access-submit {
+      width: 100%;
+      margin-top: 12px;
+      padding: 11px 14px;
+      border: 0;
+      border-radius: 10px;
+      color: #fff;
+      background: var(--navy);
+      cursor: pointer;
+      font-weight: 800;
+    }
+
+    .access-submit:hover { background: var(--navy-2); }
+
+    .access-error {
+      min-height: 20px;
+      margin: 9px 0 0 !important;
+      color: #b42318 !important;
+      font-size: .82rem !important;
+    }
+
+    button, input { font: inherit; }
+
+    button { color: inherit; }
+
+    .site-header {
+      color: #fff;
+      background: linear-gradient(130deg, #0d253d 0%, #174f78 100%);
+    }
+
+    .header-inner,
+    .nav-inner,
+    main,
+    .footer-inner {
+      width: min(1180px, calc(100% - 32px));
+      margin-inline: auto;
+    }
+
+    .header-inner {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      padding: 28px 0 24px;
+    }
+
+    .eyebrow {
+      margin: 0 0 3px;
+      color: #c8e3f5;
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.45rem, 4vw, 2.15rem);
+      line-height: 1.16;
+      letter-spacing: -.025em;
+    }
+
+    .header-meta {
+      margin: 7px 0 0;
+      color: #dbeaf4;
+      font-size: .95rem;
+    }
+
+    .top-nav {
+      position: sticky;
+      z-index: 20;
+      top: 0;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, .96);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-inner {
+      display: flex;
+      gap: 6px;
+      padding: 8px 0;
+      overflow-x: auto;
+      scrollbar-width: thin;
+    }
+
+    .tab-button {
+      flex: 0 0 auto;
+      padding: 11px 16px;
+      border: 0;
+      border-radius: 10px;
+      background: transparent;
+      color: #496276;
+      cursor: pointer;
+      font-weight: 700;
+      transition: background .16s ease, color .16s ease;
+    }
+
+    .tab-button:hover { background: #f0f5f8; color: var(--navy); }
+
+    .tab-button[aria-selected="true"] {
+      color: #fff;
+      background: var(--navy);
+    }
+
+    main { padding: 32px 0 52px; }
+
+    .page[hidden] { display: none; }
+
+    .page-heading {
+      display: flex;
+      gap: 18px;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .page-heading h2 {
+      margin: 0;
+      color: var(--navy);
+      font-size: clamp(1.35rem, 3vw, 1.8rem);
+      letter-spacing: -.02em;
+    }
+
+    .page-heading p {
+      max-width: 720px;
+      margin: 6px 0 0;
+      color: var(--muted);
+    }
+
+    .summary-pill {
+      flex: 0 0 auto;
+      padding: 8px 12px;
+      border: 1px solid #c9dce9;
+      border-radius: 999px;
+      color: var(--navy-2);
+      background: var(--blue-soft);
+      font-size: .86rem;
+      font-weight: 750;
+      white-space: nowrap;
+    }
+
+    .department-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .department-button {
+      min-height: 92px;
+      padding: 15px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--surface);
+      box-shadow: 0 2px 8px rgba(24, 49, 73, .03);
+      cursor: pointer;
+      text-align: left;
+      transition: transform .14s ease, border-color .14s ease, box-shadow .14s ease;
+    }
+
+    .department-button:hover {
+      transform: translateY(-1px);
+      border-color: #9fc4dc;
+      box-shadow: var(--shadow);
+    }
+
+    .department-button[aria-pressed="true"] {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 2px rgba(23, 105, 170, .12);
+    }
+
+    .department-code {
+      display: inline-block;
+      min-width: 44px;
+      margin-bottom: 7px;
+      padding: 3px 8px;
+      border-radius: 7px;
+      color: var(--blue);
+      background: var(--blue-soft);
+      font-size: .76rem;
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .department-name {
+      display: block;
+      color: var(--navy);
+      font-weight: 750;
+      line-height: 1.3;
+    }
+
+    .department-language {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: .78rem;
+    }
+
+    .directory-layout {
+      display: grid;
+      grid-template-columns: minmax(240px, 320px) minmax(0, 1fr);
+      gap: 22px;
+      align-items: start;
+    }
+
+    .directory-panel {
+      position: sticky;
+      top: 76px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .search-wrap {
+      padding: 14px;
+      border-bottom: 1px solid var(--line);
+      background: #fbfcfd;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #cddae3;
+      border-radius: 10px;
+      outline: none;
+      color: var(--ink);
+      background: #fff;
+    }
+
+    .search-input:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(23, 105, 170, .12);
+    }
+
+    .directory-tools {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    .selection-status {
+      color: var(--muted);
+      font-size: .78rem;
+    }
+
+    .reset-button {
+      padding: 7px 10px;
+      border: 1px solid #c9d8e2;
+      border-radius: 8px;
+      color: var(--navy-2);
+      background: #fff;
+      cursor: pointer;
+      font-size: .78rem;
+      font-weight: 750;
+    }
+
+    .reset-button:hover:not(:disabled) {
+      border-color: #9fc4dc;
+      background: var(--blue-soft);
+    }
+
+    .reset-button:disabled {
+      cursor: not-allowed;
+      opacity: .5;
+    }
+
+    .person-list {
+      max-height: calc(100vh - 190px);
+      overflow-y: auto;
+      padding: 6px;
+    }
+
+    .person-button {
+      display: flex;
+      width: 100%;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 11px;
+      border: 0;
+      border-radius: 9px;
+      background: transparent;
+      cursor: pointer;
+      text-align: left;
+    }
+
+    .person-button:hover { background: #f1f6f9; }
+
+    .person-button[aria-pressed="true"] {
+      color: var(--navy);
+      background: var(--blue-soft);
+      font-weight: 750;
+    }
+
+    .person-count {
+      display: inline-grid;
+      flex: 0 0 30px;
+      min-width: 30px;
+      height: 26px;
+      place-items: center;
+      border-radius: 999px;
+      color: #51697d;
+      background: #eef2f5;
+      font-size: .77rem;
+      font-weight: 750;
+    }
+
+    .person-button[aria-pressed="true"] .person-count {
+      color: #fff;
+      background: var(--blue);
+    }
+
+    .detail-panel { min-width: 0; }
+
+    .placeholder {
+      display: grid;
+      min-height: 220px;
+      place-items: center;
+      padding: 28px;
+      border: 1px dashed #bfcdd7;
+      border-radius: var(--radius);
+      color: var(--muted);
+      background: rgba(255, 255, 255, .55);
+      text-align: center;
+    }
+
+    .placeholder strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--navy);
+      font-size: 1.02rem;
+    }
+
+    .selection-header {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      justify-content: space-between;
+      margin: 2px 0 17px;
+    }
+
+    .selection-header h3 {
+      margin: 0;
+      color: var(--navy);
+      font-size: 1.2rem;
+    }
+
+    .selection-header p {
+      margin: 3px 0 0;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .day-group {
+      margin: 0 0 24px;
+      scroll-margin-top: 84px;
+    }
+
+    .day-heading {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin: 0 0 10px;
+      color: var(--navy);
+      font-size: 1rem;
+    }
+
+    .day-heading::after {
+      height: 1px;
+      flex: 1;
+      background: var(--line);
+      content: "";
+    }
+
+    .exam-list {
+      display: grid;
+      gap: 11px;
+    }
+
+    .exam-card {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: 0 3px 14px rgba(20, 48, 74, .05);
+    }
+
+    .exam-main {
+      display: grid;
+      grid-template-columns: 96px minmax(0, 1fr);
+      gap: 16px;
+      padding: 16px;
+    }
+
+    .exam-time {
+      color: var(--blue);
+      font-size: 1rem;
+      font-weight: 850;
+      letter-spacing: -.01em;
+      white-space: nowrap;
+    }
+
+    .exam-title {
+      margin: 0;
+      color: var(--navy);
+      font-size: 1rem;
+      line-height: 1.35;
+    }
+
+    .exam-code {
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: .8rem;
+      font-weight: 650;
+    }
+
+    .exam-details {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px 18px;
+      margin-top: 12px;
+      color: #3d5568;
+      font-size: .88rem;
+    }
+
+    .detail-label {
+      display: block;
+      color: #7a8c9b;
+      font-size: .7rem;
+      font-weight: 800;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .program-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 5px;
+    }
+
+    .programs-block {
+      margin-top: 11px;
+    }
+
+    .program-tag {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 999px;
+      color: #355b76;
+      background: #edf4f8;
+      font-size: .73rem;
+      font-weight: 750;
+    }
+
+    .room-table {
+      border-top: 1px solid var(--line);
+      background: #fbfcfd;
+    }
+
+    .room-row {
+      display: grid;
+      grid-template-columns: minmax(90px, .7fr) minmax(160px, 1.35fr) minmax(90px, .7fr) minmax(80px, .6fr);
+      gap: 10px;
+      align-items: start;
+      padding: 10px 16px;
+      color: #3b5265;
+      font-size: .84rem;
+    }
+
+    .room-row + .room-row { border-top: 1px solid #e7edf1; }
+
+    .room-name strong {
+      color: var(--navy);
+      font-weight: 800;
+    }
+
+    .room-proctor { min-width: 0; overflow-wrap: anywhere; }
+
+    .student-count {
+      color: var(--muted);
+      font-size: .78rem;
+    }
+
+    .room-capacity {
+      color: var(--muted);
+      font-size: .78rem;
+    }
+
+    .exam-note {
+      padding: 9px 16px;
+      border-top: 1px solid #efdca8;
+      color: var(--warning);
+      background: var(--warning-bg);
+      font-size: .82rem;
+    }
+
+    .empty-list {
+      padding: 22px 14px;
+      color: var(--muted);
+      text-align: center;
+      font-size: .9rem;
+    }
+
+    .site-footer {
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      background: #fff;
+    }
+
+    .footer-inner {
+      padding: 19px 0 24px;
+      font-size: .83rem;
+      text-align: center;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    @media (max-width: 820px) {
+      .department-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .directory-layout { grid-template-columns: 1fr; }
+      .directory-panel { position: static; }
+      .person-list { max-height: 360px; }
+      .page-heading { align-items: flex-start; flex-direction: column; }
+    }
+
+    @media (max-width: 560px) {
+      .header-inner, .nav-inner, main, .footer-inner {
+        width: min(100% - 22px, 1180px);
+      }
+
+      .header-inner { padding: 20px 0; }
+      .header-meta { font-size: .84rem; }
+      main { padding-top: 23px; }
+      .nav-inner { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; }
+      .tab-button { padding: 10px 6px; font-size: .78rem; white-space: normal; }
+      .department-grid { grid-template-columns: 1fr; gap: 9px; }
+      .department-button { min-height: 76px; }
+      .exam-main { grid-template-columns: 1fr; gap: 6px; padding: 14px; }
+      .exam-details { grid-template-columns: 1fr; gap: 7px; }
+      .room-row { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 10px 14px; }
+      .selection-header { align-items: flex-start; flex-direction: column; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .site-header { color: #000; background: #fff; }
+      .top-nav, .department-grid, .directory-panel, .placeholder { display: none !important; }
+      .header-meta, .eyebrow { color: #333; }
+      main { width: 100%; padding: 16px 0; }
+      .directory-layout { display: block; }
+      .exam-card { break-inside: avoid; box-shadow: none; }
+    }
+  </style>
+
+  <style>
+  /* ---- renk katmanı (3_formlari_uret.py ekler; yalnız ekranda) ---- */
+  @media screen {
+    .site-header, .access-gate { background: linear-gradient(120deg, #0d253d 0%, #1769aa 55%, #16917f 100%); }
+    .site-header::after { content: ""; display: block; height: 6px; background: linear-gradient(90deg, #3f8f2a 0% 10%, #2f75b5 10% 20%, #b7791f 20% 30%, #e46c0a 30% 40%, #2f5fb3 40% 50%, #6f2f9f 50% 60%, #c00000 60% 70%, #1f3b73 70% 80%, #548235 80% 90%, #0089b8 90% 100%); }
+    .access-submit { background: #1769aa; }
+    .access-submit:hover { background: #0f8a6b; }
+
+    #tab-schedule, #page-schedule { --accent: #1769aa; }
+    #tab-teachers, #page-teachers { --accent: #0f8a6b; }
+    #tab-proctors, #page-proctors { --accent: #d9730d; }
+    .top-nav .tab-button { color: var(--accent); background: color-mix(in srgb, var(--accent) 9%, white);
+      border: 2px solid color-mix(in srgb, var(--accent) 22%, white); }
+    .top-nav .tab-button:hover { color: var(--accent); background: color-mix(in srgb, var(--accent) 18%, white); }
+    .top-nav .tab-button[aria-selected="true"] { color: #fff; background: var(--accent); border-color: var(--accent);
+      box-shadow: 0 5px 16px color-mix(in srgb, var(--accent) 35%, transparent); }
+
+    .page .page-heading { padding-left: 14px; border-left: 6px solid var(--accent); }
+    .page .page-heading h2 { color: var(--accent); }
+    .page .summary-pill { color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, white);
+      border-color: color-mix(in srgb, var(--accent) 35%, white); }
+    .page .exam-card { border-top: 4px solid var(--accent); }
+    .page .exam-time { color: var(--accent); }
+    .page .person-button[aria-pressed="true"] { color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, white); }
+    .page .person-button[aria-pressed="true"] .person-count { background: var(--accent); }
+    .page .room-departments { color: var(--accent); font-weight: 700; }
+
+    .department-button, .program-tag { --c: #6b7785; }
+    .department-button { border-left: 6px solid var(--c); }
+    .department-button[data-code="SBUİ"], .program-tag[data-dept="SBUİ"] { --c: #3f8f2a; }
+    .department-button[data-code="PSIR"], .program-tag[data-dept="PSIR"] { --c: #2f75b5; }
+    .department-button[data-code="İŞL"], .program-tag[data-dept="İŞL"] { --c: #b7791f; }
+    .department-button[data-code="BUS"], .program-tag[data-dept="BUS"] { --c: #e46c0a; }
+    .department-button[data-code="UTF"], .program-tag[data-dept="UTF"] { --c: #2f5fb3; }
+    .department-button[data-code="LOJ"], .program-tag[data-dept="LOJ"] { --c: #6f2f9f; }
+    .department-button[data-code="HAV"], .program-tag[data-dept="HAV"] { --c: #c00000; }
+    .department-button[data-code="YBS"], .program-tag[data-dept="YBS"] { --c: #1f3b73; }
+    .department-button[data-code="ECF"], .program-tag[data-dept="ECF"] { --c: #548235; }
+    .department-button[data-code="ETİC"], .program-tag[data-dept="ETİC"] { --c: #0089b8; }
+    .department-grid .department-button:hover { border-color: var(--c); background: color-mix(in srgb, var(--c) 7%, white); }
+    .department-grid .department-button[aria-pressed="true"] { border-color: var(--c); background: color-mix(in srgb, var(--c) 15%, white);
+      box-shadow: 0 6px 18px color-mix(in srgb, var(--c) 25%, transparent); }
+    .department-button .department-code { color: #fff; background: var(--c); }
+    .department-button .department-name { color: color-mix(in srgb, var(--c) 70%, #102a43); }
+
+    .program-tags .program-tag { color: var(--c); background: color-mix(in srgb, var(--c) 12%, white);
+      border: 1px solid color-mix(in srgb, var(--c) 35%, white); }
+
+    .day-heading { --d: #1769aa; }
+    .day-heading[data-day="Pazartesi"] { --d: #1769aa; }
+    .day-heading[data-day="Salı"] { --d: #0f8a6b; }
+    .day-heading[data-day="Çarşamba"] { --d: #6f2f9f; }
+    .day-heading[data-day="Perşembe"] { --d: #d9730d; }
+    .day-heading[data-day="Cuma"] { --d: #c0392b; }
+    .day-group .day-heading { padding: 8px 14px; border-radius: 10px; color: #fff;
+      background: linear-gradient(90deg, var(--d), color-mix(in srgb, var(--d) 45%, white)); }
+    .day-group .day-heading::after { display: none; }
+
+    #tab-unit, #page-unit { --accent: #6f2f9f; }
+    .unit-lock { max-width: 360px; padding: 20px; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
+    .unit-lock .access-submit { background: var(--accent); }
+    .unit-summary { margin: 0 0 12px; color: var(--accent); font-weight: 750; }
+    .unit-table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
+    .unit-table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+    .unit-table th { padding: 10px; color: #fff; background: var(--accent); text-align: left; white-space: nowrap; }
+    .unit-table td { padding: 9px 10px; border-top: 1px solid var(--line); }
+    .unit-table tr:nth-child(even) td { background: color-mix(in srgb, var(--accent) 5%, white); }
+    .unit-table .num { text-align: center; }
+    .unit-table .strong { font-weight: 800; color: var(--accent); }
+  }
+  </style>
+</head>
+<body>
+  <div class="access-gate" id="access-gate" role="dialog" aria-modal="true" aria-labelledby="access-title">
+    <form class="access-card" id="access-form">
+      <h2 id="access-title">Sınav Programına Giriş</h2>
+      <p>Programı görüntülemek için erişim şifresini girin.</p>
+      <label class="access-label" for="access-password">Şifre</label>
+      <input class="access-input" id="access-password" type="password" autocapitalize="off" autocorrect="off" spellcheck="false" autocomplete="current-password" required autofocus>
+      <button class="access-submit" type="submit">Programı Aç</button>
+      <p class="access-error" id="access-error" role="alert" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div>
+        <p class="eyebrow">İstanbul Esenyurt Üniversitesi</p>
+        <h1>İşletme ve Yönetim Bilimleri Fakültesi</h1>
+        <p class="header-meta">2026-2027 Güz Dönemi Vize Sınav Programı · 2–6 Kasım 2026</p>
+      </div>
+    </div>
+  </header>
+
+  <nav class="top-nav" aria-label="Program sayfaları">
+    <div class="nav-inner" role="tablist">
+      <button class="tab-button" id="tab-schedule" role="tab" aria-controls="page-schedule" aria-selected="true" data-page="schedule">Sınav Programları</button>
+      <button class="tab-button" id="tab-teachers" role="tab" aria-controls="page-teachers" aria-selected="false" data-page="teachers">Öğretim Üyeleri</button>
+      <button class="tab-button" id="tab-proctors" role="tab" aria-controls="page-proctors" aria-selected="false" data-page="proctors">Gözetmenler</button>
+    </div>
+  </nav>
+
+  <p id="js-uyari" style="margin:0;padding:12px 16px;color:#79520c;background:#fff7df;text-align:center;font-weight:600">Bölümler ve program görünmüyorsa bu sayfa bir önizleme ekranında (WhatsApp, Dosyalar, Drive) açılmıştır. Lütfen tarayıcıdan şu adresi açın: <a href="https://iybf-sinav.github.io/">iybf-sinav.github.io</a></p>
+  <main>
+    <section class="page" id="page-schedule" role="tabpanel" aria-labelledby="tab-schedule">
+      <div class="page-heading">
+        <div>
+          <h2>Bölümlere Göre Sınav Programı</h2>
+          <p>Bölümünüzü seçerek derslerin tarih, saat, derslik ve gözetmen bilgilerini görüntüleyin.</p>
+        </div>
+        <span class="summary-pill" id="schedule-summary"></span>
+      </div>
+      <div class="department-grid" id="department-grid"></div>
+      <div class="detail-panel" id="department-detail">
+        <div class="placeholder">
+          <div><strong>Bölümünüzü seçin</strong>Yukarıdaki bölüm düğmelerinden birine tıklayın.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" id="page-teachers" role="tabpanel" aria-labelledby="tab-teachers" hidden>
+      <div class="page-heading">
+        <div>
+          <h2>Öğretim Üyeleri</h2>
+          <p>Bir veya birden fazla öğretim üyesini seçerek sorumlu oldukları sınavları birlikte görüntüleyin.</p>
+        </div>
+        <span class="summary-pill" id="teacher-summary"></span>
+      </div>
+      <div class="directory-layout">
+        <aside class="directory-panel">
+          <div class="search-wrap">
+            <label class="sr-only" for="teacher-search">Öğretim üyesi ara</label>
+            <input class="search-input" id="teacher-search" type="search" placeholder="İsim ara…" autocomplete="off">
+            <div class="directory-tools">
+              <span class="selection-status" id="teacher-selection-status">Seçim yapılmadı</span>
+              <button class="reset-button" id="teacher-reset" type="button" disabled>Seçimleri sıfırla</button>
+            </div>
+          </div>
+          <div class="person-list" id="teacher-list"></div>
+        </aside>
+        <div class="detail-panel" id="teacher-detail">
+          <div class="placeholder">
+            <div><strong>Öğretim üyesi seçin</strong>Soldaki listeden bir veya birden fazla isim seçin.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" id="page-proctors" role="tabpanel" aria-labelledby="tab-proctors" hidden>
+      <div class="page-heading">
+        <div>
+          <h2>Gözetmenler</h2>
+          <p>Bir gözetmeni seçerek görevli olduğu sınavları ve derslikleri görüntüleyin.</p>
+        </div>
+        <span class="summary-pill" id="proctor-summary"></span>
+      </div>
+      <div class="directory-layout">
+        <aside class="directory-panel">
+          <div class="search-wrap">
+            <label class="sr-only" for="proctor-search">Gözetmen ara</label>
+            <input class="search-input" id="proctor-search" type="search" placeholder="İsim ara…" autocomplete="off">
+          </div>
+          <div class="person-list" id="proctor-list"></div>
+        </aside>
+        <div class="detail-panel" id="proctor-detail">
+          <div class="placeholder">
+            <div><strong>Gözetmen seçin</strong>Soldaki listeden bir isme tıklayın.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">İESU İYBF Sınav Planlama Komisyonu; bu uygulamayı geliştiren Arş. Gör. Melih Mert Oskay’a ve değerli katkılarıyla destek veren Arş. Gör. Umut Saraç’a teşekkür eder.</div>
+  </footer>
+
+  <noscript>Bu sayfadaki filtreleri kullanmak için JavaScript etkin olmalıdır.</noscript>
+
+  <script>
+    (function () { var u = document.getElementById("js-uyari"); if (u) u.hidden = true; })();
+    const ACCESS_PASSWORD = "";
+    const ACCESS_SESSION_KEY = "iesu-exam-program-access";
+    const accessForm = document.querySelector("#access-form");
+    const accessPassword = document.querySelector("#access-password");
+    const accessError = document.querySelector("#access-error");
+
+    function unlockPage() {
+      document.body.classList.remove("access-locked");
+      document.querySelector("#access-gate").setAttribute("aria-hidden", "true");
+    }
+
+    try {
+      if (sessionStorage.getItem(ACCESS_SESSION_KEY) === "granted") unlockPage();
+    } catch (error) {
+      // Oturum depolaması kapalıysa giriş yine çalışır; yalnızca sayfa yenilenince tekrar şifre ister.
+    }
+
+    accessForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      if (accessPassword.value === ACCESS_PASSWORD) {
+        try { sessionStorage.setItem(ACCESS_SESSION_KEY, "granted"); } catch (error) {}
+        accessError.textContent = "";
+        accessPassword.value = "";
+        unlockPage();
+        return;
+      }
+      accessError.textContent = "Şifre hatalı. Lütfen tekrar deneyin.";
+      accessPassword.select();
+    });
+
+    const DATA = {"meta": {"institution": "İstanbul Esenyurt Üniversitesi", "faculty": "İşletme ve Yönetim Bilimleri Fakültesi", "period": "2–6 Kasım 2026", "examCount": 120, "assignmentCount": 78, "teacherCount": 45, "proctorCount": 14}, "departments": [{"code": "SBUİ", "name": "Siyaset Bilimi ve Uluslararası İlişkiler", "language": "Türkçe"}, {"code": "PSIR", "name": "Political Science and International Relations", "language": "English"}, {"code": "İŞL", "name": "İşletme", "language": "Türkçe"}, {"code": "BUS", "name": "Business Administration", "language": "English"}, {"code": "UTF", "name": "Uluslararası Ticaret ve Finansman", "language": "Türkçe"}, {"code": "LOJ", "name": "Lojistik Yönetimi", "language": "Türkçe"}, {"code": "HAV", "name": "Havacılık Yönetimi", "language": "Türkçe"}, {"code": "YBS", "name": "Yönetim Bilişim Sistemleri", "language": "Türkçe"}, {"code": "ECF", "name": "Economics and Finance", "language": "English"}, {"code": "ETİC", "name": "Elektronik Ticaret ve Yönetimi", "language": "Türkçe"}], "exams": [{"id": "exam-1", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "10:00", "end": "10:50", "courseCode": "20EG4009", "course": "Organizational Behavior", "programs": ["BUS-5", "ECF-5", "PSIR-5"], "teacher": "Açelya TELLİ", "totalStudents": "31", "notes": [], "rooms": [{"room": "6A2", "capacity": "33", "students": "31", "proctor": "Tunahan Başoğlu", "departments": "BUS 25, PSIR 5, ECF 1"}]}, {"id": "exam-2", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "10:00", "end": "10:50", "courseCode": "2016B4030", "course": "Terörizm ve İstihbarat", "programs": ["SBUİ-5"], "teacher": "Erhan CANİKOĞLU", "totalStudents": "14", "notes": [], "rooms": [{"room": "6D1", "capacity": "17", "students": "14", "proctor": "Gerekmiyor", "departments": "SBUİ 11, HAV 3"}]}, {"id": "exam-3", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "10:00", "end": "10:50", "courseCode": "2021G1003", "course": "Yönetim Bilişim Sistemlerine Giriş", "programs": ["YBS-1"], "teacher": "Merve DOĞRUEL", "totalStudents": "38", "notes": [], "rooms": [{"room": "6A1", "capacity": "35", "students": "38", "proctor": "Duygu Yayla Eldem", "departments": "YBS 38"}]}, {"id": "exam-4", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "11:00", "end": "11:50", "courseCode": "2019G2002", "course": "Depolama ve Envanter Yönetimi", "programs": ["LOJ-3"], "teacher": "Celil Durdağ", "totalStudents": "24", "notes": [], "rooms": [{"room": "6A2", "capacity": "33", "students": "24", "proctor": "Gerekmiyor", "departments": "LOJ 24"}]}, {"id": "exam-5", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "11:00", "end": "11:50", "courseCode": "2075B1003", "course": "Information and Communication Technologies", "programs": ["BUS-1", "ECF-3", "PSIR-1"], "teacher": "Jumana ALHALİSİ", "totalStudents": "45", "notes": ["2 dersliğe bölündü"], "rooms": [{"room": "6D1", "capacity": "17", "students": "17", "proctor": "Melih Mert Oskay", "departments": "BUS 17"}, {"room": "6D5", "capacity": "23", "students": "28", "proctor": "Mehmet Deniz Nalbantoğlu", "departments": "ECF 13, PSIR 15"}]}, {"id": "exam-6", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "11:00", "end": "11:50", "courseCode": "2016G4001", "course": "Siyaset Psikolojisi", "programs": ["SBUİ-7"], "teacher": "Duygu YAYLA ELDEM", "totalStudents": "21", "notes": [], "rooms": [{"room": "6A1", "capacity": "35", "students": "21", "proctor": "Duygu Yayla Eldem (dersin hocası)", "departments": "SBUİ 21"}]}, {"id": "exam-7", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "11:00", "end": "11:50", "courseCode": "2020G2001", "course": "Uluslararası İktisat Teorisi ve Politikası", "programs": ["UTF-3"], "teacher": "İbrahim Bora ORAN", "totalStudents": "20", "notes": [], "rooms": [{"room": "6D3", "capacity": "23", "students": "20", "proctor": "Gerekmiyor", "departments": "UTF 20"}]}, {"id": "exam-8", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "12:00", "end": "13:30", "courseCode": "2021G1007", "course": "Algoritma ve Programlama 1", "programs": ["YBS-1"], "teacher": "Ülker BAŞAR", "totalStudents": "38", "notes": ["90 dakika"], "rooms": [{"room": "4L1", "capacity": "", "students": "38", "proctor": "Gerekmiyor", "departments": "YBS 38"}]}, {"id": "exam-9", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "12:00", "end": "12:50", "courseCode": "20G1002", "course": "Finansal Muhasebe I", "programs": ["HAV-3", "LOJ-3", "UTF-3", "İŞL-3"], "teacher": "Zekeriya ŞAHİN", "totalStudents": "86", "notes": ["4 dersliğe bölündü"], "rooms": [{"room": "6A2", "capacity": "33", "students": "25", "proctor": "Mehmet Deniz Nalbantoğlu", "departments": "İŞL 25"}, {"room": "6D3", "capacity": "23", "students": "18", "proctor": "Taha Gümüş", "departments": "UTF 18"}, {"room": "6D4", "capacity": "25", "students": "25", "proctor": "Tunahan Başoğlu", "departments": "HAV 25"}, {"room": "6D5", "capacity": "23", "students": "18", "proctor": "Melih Mert Oskay", "departments": "LOJ 18"}]}, {"id": "exam-10", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "12:00", "end": "12:50", "courseCode": "2017G4001", "course": "Political Psychology", "programs": ["PSIR-7"], "teacher": "Mehmet Cihan TOKER", "totalStudents": "8", "notes": [], "rooms": [{"room": "6D1", "capacity": "17", "students": "8", "proctor": "Gerekmiyor", "departments": "PSIR 8"}]}, {"id": "exam-11", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "12:00", "end": "12:50", "courseCode": "2016G2005", "course": "Siyasi Düşünceler Tarihi", "programs": ["SBUİ-3"], "teacher": "Munise Nur AKTAN", "totalStudents": "17", "notes": [], "rooms": [{"room": "6A1", "capacity": "35", "students": "17", "proctor": "Gerekmiyor", "departments": "SBUİ 17"}]}, {"id": "exam-12", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "13:00", "end": "13:50", "courseCode": "2022G3004", "course": "Economics of Development", "programs": ["ECF-5"], "teacher": "İlknur ŞİMŞEK", "totalStudents": "11", "notes": [], "rooms": [{"room": "6D1", "capacity": "17", "students": "11", "proctor": "Gerekmiyor", "departments": "ECF 9, PSIR 2"}]}, {"id": "exam-13", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "13:00", "end": "13:50", "courseCode": "2018G3010", "course": "Havacılık İngilizcesi-I", "programs": ["HAV-5"], "teacher": "Kadir BAL", "totalStudents": "30", "notes": [], "rooms": [{"room": "6A2", "capacity": "33", "students": "30", "proctor": "Gerekmiyor", "departments": "HAV 30"}]}, {"id": "exam-14", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "13:00", "end": "13:50", "courseCode": "20EG2003", "course": "Human Resources Management", "programs": ["BUS-3"], "teacher": "Esma Görkem ERSOY", "totalStudents": "22", "notes": [], "rooms": [{"room": "6A1", "capacity": "35", "students": "22", "proctor": "Gerekmiyor", "departments": "BUS 22"}]}, {"id": "exam-15", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "13:00", "end": "13:50", "courseCode": "2020G4002", "course": "Küresel Lojistik ve Tedarik Zinciri Yönetimi", "programs": ["UTF-7"], "teacher": "İbrahim Bora ORAN", "totalStudents": "14", "notes": [], "rooms": [{"room": "6D5", "capacity": "23", "students": "14", "proctor": "Gerekmiyor", "departments": "UTF 14"}]}, {"id": "exam-16", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "13:00", "end": "13:50", "courseCode": "2014G4012", "course": "Neuro-Marketing and Consumer Behaviour", "programs": ["BUS-7"], "teacher": "Açelya TELLİ", "totalStudents": "10", "notes": [], "rooms": [{"room": "6D3", "capacity": "23", "students": "10", "proctor": "Ozan Atalay", "departments": "BUS 10"}]}, {"id": "exam-17", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "13:00", "end": "13:50", "courseCode": "2017G3005", "course": "Political Structure and Life in Turkey- I", "programs": ["PSIR-5"], "teacher": "Mehmet Cihan TOKER", "totalStudents": "5", "notes": [], "rooms": [{"room": "6D4", "capacity": "25", "students": "5", "proctor": "Gerekmiyor", "departments": "PSIR 5"}]}, {"id": "exam-18", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "14:00", "end": "14:50", "courseCode": "2017G2005", "course": "History of Political Thought", "programs": ["PSIR-3"], "teacher": "Munise Nur AKTAN", "totalStudents": "10", "notes": [], "rooms": [{"room": "6D3", "capacity": "23", "students": "10", "proctor": "Gerekmiyor", "departments": "PSIR 10"}]}, {"id": "exam-19", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "14:00", "end": "14:50", "courseCode": "2023G4001", "course": "Maliyet Muhasebesi", "programs": ["ETİC-7"], "teacher": "Hüşeyin YAŞAR", "totalStudents": "10", "notes": [], "rooms": [{"room": "6D1", "capacity": "17", "students": "10", "proctor": "Melih Mert Oskay", "departments": "ETİC 10"}]}, {"id": "exam-20", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "14:00", "end": "14:50", "courseCode": "20G1005", "course": "Sosyolojide Temel Kavramlar", "programs": ["SBUİ-1"], "teacher": "Kemal ER", "totalStudents": "20", "notes": [], "rooms": [{"room": "6D5", "capacity": "23", "students": "20", "proctor": "Gerekmiyor", "departments": "SBUİ 19, HAV 1"}]}, {"id": "exam-21", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "14:00", "end": "14:50", "courseCode": "2010G3015", "course": "Uluslararası Finans ve Para Piyasaları", "programs": ["İŞL-5"], "teacher": "Tuğba KOYUNCU ÇAKMAK", "totalStudents": "29", "notes": [], "rooms": [{"room": "6A1", "capacity": "35", "students": "29", "proctor": "Gerekmiyor", "departments": "İŞL 29"}]}, {"id": "exam-22", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "14:00", "end": "14:50", "courseCode": "2021G2008", "course": "İstatistik ve Olasılık", "programs": ["YBS-3"], "teacher": "Merve DOĞRUEL", "totalStudents": "41", "notes": [], "rooms": [{"room": "6A2", "capacity": "33", "students": "41", "proctor": "Mehmet Deniz Nalbantoğlu", "departments": "YBS 41"}]}, {"id": "exam-23", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "15:00", "end": "16:30", "courseCode": "2021G4015", "course": "Excel VBA Programlama", "programs": ["YBS-7"], "teacher": "Ülker BAŞAR", "totalStudents": "30", "notes": ["90 dakika"], "rooms": [{"room": "11L5", "capacity": "", "students": "30", "proctor": "Gerekmiyor", "departments": "YBS 30"}]}, {"id": "exam-24", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "15:00", "end": "15:50", "courseCode": "2020G4004", "course": "Küresel Rekabetçilik ve Rekabet Stratejisi", "programs": ["UTF-7"], "teacher": "İbrahim Bora ORAN", "totalStudents": "52", "notes": ["2 dersliğe bölündü"], "rooms": [{"room": "6D3", "capacity": "23", "students": "23", "proctor": "Gerekmiyor", "departments": "SBUİ 12, İŞL 11"}, {"room": "6D5", "capacity": "23", "students": "29", "proctor": "Taha Gümüş", "departments": "HAV 10, ETİC 5, UTF 14"}]}, {"id": "exam-25", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "15:00", "end": "15:50", "courseCode": "2075B1002", "course": "Turkish Language I", "programs": ["BUS-1", "ECF-1", "PSIR-1"], "teacher": "Elif ŞİMŞEK", "totalStudents": "39", "notes": [], "rooms": [{"room": "6A2", "capacity": "33", "students": "39", "proctor": "Gerekmiyor", "departments": "ECF 9, PSIR 15, BUS 15"}]}, {"id": "exam-26", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "16:00", "end": "16:50", "courseCode": "20G1004", "course": "Bilgi ve İletişim Teknolojileri", "programs": ["ETİC-1", "HAV-1", "LOJ-1", "SBUİ-1", "UTF-1", "İŞL-1"], "teacher": "Elif Mutlu ERDOĞAN", "totalStudents": "166", "notes": ["6 dersliğe bölündü"], "rooms": [{"room": "6A1", "capacity": "35", "students": "33", "proctor": "Tunahan Başoğlu", "departments": "LOJ 33"}, {"room": "6A2", "capacity": "33", "students": "36", "proctor": "Mehmet Deniz Nalbantoğlu", "departments": "HAV 36"}, {"room": "6D1", "capacity": "17", "students": "21", "proctor": "Duygu Yayla Eldem", "departments": "İŞL 21"}, {"room": "6D3", "capacity": "23", "students": "20", "proctor": "Şeyma Sertçelik", "departments": "İŞL 20"}, {"room": "6D4", "capacity": "25", "students": "28", "proctor": "Taha Gümüş", "departments": "SBUİ 18, ETİC 10"}, {"room": "6D5", "capacity": "23", "students": "28", "proctor": "Melih Mert Oskay", "departments": "UTF 28"}]}, {"id": "exam-27", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "17:00", "end": "17:50", "courseCode": "2016G4021", "course": "Bölgesel Çalışmalar : Avrasya", "programs": ["SBUİ-7"], "teacher": "Erhan CANİKOĞLU", "totalStudents": "50", "notes": ["2 dersliğe bölündü"], "rooms": [{"room": "6A2", "capacity": "33", "students": "40", "proctor": "Melih Mert Oskay", "departments": "LOJ 28, SBUİ 10, HAV 2"}, {"room": "6D3", "capacity": "23", "students": "10", "proctor": "Gerekmiyor", "departments": "SBUİ 10"}]}, {"id": "exam-28", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "17:00", "end": "17:50", "courseCode": "2014G1001", "course": "Introduction to Business Administration-I", "programs": ["BUS-1", "ECF-1"], "teacher": "E. Erdinç GÜLBAŞ", "totalStudents": "18", "notes": [], "rooms": [{"room": "6D1", "capacity": "17", "students": "18", "proctor": "Gerekmiyor", "departments": "ECF 9, BUS 9"}]}, {"id": "exam-29", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "09:00", "end": "10:30", "courseCode": "2021G2007", "course": "Veri Yapıları", "programs": ["YBS-3"], "teacher": "Ülker BAŞAR", "totalStudents": "35", "notes": ["90 dakika"], "rooms": [{"room": "11L8", "capacity": "", "students": "35", "proctor": "Gerekmiyor", "departments": "YBS 35"}]}, {"id": "exam-30", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "10:00", "end": "10:50", "courseCode": "2022G4001", "course": "Derivatives and Risk Management", "programs": ["ECF-7"], "teacher": "Sudi APAK", "totalStudents": "2", "notes": [], "rooms": [{"room": "6D5", "capacity": "23", "students": "2", "proctor": "Merve Sevinç Sakar", "departments": "ECF 2"}]}, {"id": "exam-31", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "10:00", "end": "10:50", "courseCode": "2023G4009", "course": "Müşteri İlişkileri ve Şikayet Yönetimi", "programs": ["ETİC-7"], "teacher": "M. Evren ÇELİK SÜTİÇER", "totalStudents": "11", "notes": [], "rooms": [{"room": "6D1", "capacity": "17", "students": "11", "proctor": "Gerekmiyor", "departments": "ETİC 11"}]}, {"id": "exam-32", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "10:00", "end": "10:50", "courseCode": "2023G2005", "course": "Pazar Araştırma Teknikleri", "programs": ["ETİC-3"], "teacher": "M. Evren ÇELİK SÜTİÇER", "totalStudents": "9", "notes": [], "rooms": [{"room": "6D1", "capacity": "17", "students": "9", "proctor": "Gerekmiyor", "departments": "ETİC 9"}]}, {"id": "exam-33", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "10:00", "end": "10:50", "courseCode": "2020G3004", "course": "Uluslararası Ticari Örgütler", "programs": ["UTF-5"], "teacher": "Elif Nur EKEN", "totalStudents": "29", "notes": [], "rooms": [{"room": "6A1", "capacity": "35", "students": "29", "proctor": "Elif Nur Eken (dersin hocası)", "departments": "UTF 9, İŞL 8, SBUİ 6, LOJ 4, HAV 1, ETİC 1"}]}, {"id": "exam-34", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "11:00", "end": "11:50", "courseCode": "2023G3007", "course": "Arama Motoru Optimizasyonu", "programs": ["ETİC-5"], "teacher": "M. Evren ÇELİK SÜTİÇER", "totalStudents": "9", "notes": [], "rooms": [{"room": "6D1", "capacity": "17", "students": "9", "proctor": "Gerekmiyor", "departments": "ETİC 9"}]}, {"id": "exam-35", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "11:00", "end": "11:50", "courseCode": "2018G4008", "course": "Havacılık Yönetiminde Güncel Yaklaşımlar", "programs": ["HAV-7"], "teacher": "Esma Görkem ERSOY", "totalStudents": "18", "notes": [], "rooms": [{"room": "6D3", "capacity": "23", "students": "18", "proctor": "Gerekmiyor", "departments": "HAV 18"}]}, {"id": "exam-36", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "11:00", "end": "11:50", "courseCode": "2019G3002", "course": "Lojistikte Kullanılan Belgeler", "programs": ["LOJ-5"], "teacher": "Celil Durdağ", "totalStudents": "24", "notes": [], "rooms": [{"room": "6D4", "capacity": "25", "students": "24", "proctor": "Gerekmiyor", "departments": "LOJ 24"}]}, {"id": "exam-37", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "11:00", "end": "11:50", "courseCode": "2010G2007", "course": "Pazarlamaya Giriş", "programs": ["İŞL-3"], "teacher": "Alperen ŞAHİN", "totalStudents": "31", "notes": [], "rooms": [{"room": "6A2", "capacity": "33", "students": "31", "proctor": "Gerekmiyor", "departments": "İŞL 31"}]}, {"id": "exam-38", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "11:00", "end": "11:50", "courseCode": "2022EG3021", "course": "Political Economics", "programs": ["ECF-7", "PSIR-?"], "teacher": "İlknur ŞİMŞEK", "totalStudents": "8", "notes": [], "rooms": [{"room": "6D5", "capacity": "23", "students": "8", "proctor": "Gerekmiyor", "departments": "ECF 8"}]}, {"id": "exam-39", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "11:00", "end": "11:50", "courseCode": "", "course": "Sektör Kampüste: Dijital Muhasebe Uygulamaları", "programs": ["UTF-?", "YBS-?"], "teacher": "", "totalStudents": "", "notes": [], "rooms": [{"room": "6A1", "capacity": "35", "students": "0", "proctor": "Gerekmiyor", "departments": "Öğrenci 0"}]}, {"id": "exam-40", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "12:00", "end": "12:50", "courseCode": "2020B3003", "course": "Davranışsal Finans", "programs": ["İŞL-5"], "teacher": "Ş. Onur VİGA", "totalStudents": "28", "notes": [], "rooms": [{"room": "6A1", "capacity": "35", "students": "28", "proctor": "Gerekmiyor", "departments": "İŞL 28"}]}, {"id": "exam-41", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "12:00", "end": "12:50", "courseCode": "2018G4007", "course": "Hava Kargo ve Tehlikeli Maddeler", "programs": ["HAV-7"], "teacher": "Kerem Şahinboy", "totalStudents": "23", "notes": [], "rooms": [{"room": "6D4", "capacity": "25", "students": "23", "proctor": "Gerekmiyor", "departments": "HAV 21, SBUİ 2"}]}, {"id": "exam-42", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "12:00", "end": "12:50", "courseCode": "20EG2006", "course": "Introduction to Law", "programs": ["BUS-3", "ECF-1", "PSIR-1"], "teacher": "Dikran M. ZENGİNKUZUCU", "totalStudents": "45", "notes": ["2 dersliğe bölündü"], "rooms": [{"room": "6D1", "capacity": "17", "students": "16", "proctor": "Şeyma Sertçelik", "departments": "PSIR 16"}, {"room": "6D5", "capacity": "23", "students": "29", "proctor": "Begüm İnanç", "departments": "ECF 9, BUS 20"}]}, {"id": "exam-43", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "13:00", "end": "13:50", "courseCode": "2023B4006", "course": "Dijital Marka Yönetimi", "programs": ["ETİC-7"], "teacher": "Alperen ŞAHİN", "totalStudents": "11", "notes": [], "rooms": [{"room": "6D4", "capacity": "25", "students": "11", "proctor": "Gerekmiyor", "departments": "ETİC 11"}]}, {"id": "exam-44", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "13:00", "end": "13:50", "courseCode": "20G2006", "course": "Temel Hukuk", "programs": ["LOJ-3", "SBUİ-1", "UTF-3", "YBS-1", "İŞL-3"], "teacher": "Mehmet Cihan TOKER", "totalStudents": "125", "notes": ["5 dersliğe bölündü"], "rooms": [{"room": "6A1", "capacity": "35", "students": "35", "proctor": "Mehmet Deniz Nalbantoğlu", "departments": "YBS 35"}, {"room": "6A2", "capacity": "33", "students": "33", "proctor": "Hilal Önge", "departments": "İŞL 33"}, {"room": "6D1", "capacity": "17", "students": "15", "proctor": "Kadriye Giray", "departments": "UTF 15"}, {"room": "6D3", "capacity": "23", "students": "22", "proctor": "Seda Emir", "departments": "SBUİ 22"}, {"room": "6D5", "capacity": "23", "students": "20", "proctor": "Taha Gümüş", "departments": "LOJ 20"}]}, {"id": "exam-45", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "14:00", "end": "14:50", "courseCode": "2075EG3001", "course": "City and Culture", "programs": ["PSIR-5"], "teacher": "Ali Emre ELDEM", "totalStudents": "8", "notes": [], "rooms": [{"room": "6A2", "capacity": "33", "students": "8", "proctor": "Gerekmiyor", "departments": "PSIR 8"}]}, {"id": "exam-46", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "14:00", "end": "14:50", "courseCode": "2010G4019", "course": "Finansal Tablolar Analizi", "programs": ["İŞL-7"], "teacher": "Tuğba KOYUNCU ÇAKMAK", "totalStudents": "14", "notes": [], "rooms": [{"room": "6D5", "capacity": "23", "students": "14", "proctor": "Gerekmiyor", "departments": "İŞL 14"}]}, {"id": "exam-47", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "14:00", "end": "14:50", "courseCode": "2021G4016", "course": "İşletim Sistemleri", "programs": ["YBS-7"], "teacher": "Mohammad NASERINIA", "totalStudents": "25", "notes": [], "rooms": [{"room": "6D4", "capacity": "25", "students": "25", "proctor": "Gerekmiyor", "departments": "YBS 25"}]}, {"id": "exam-48", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "14:00", "end": "14:50", "courseCode": "2075G3002", "course": "Şehir ve Kültür", "programs": ["SBUİ-5"], "teacher": "Ali Emre ELDEM", "totalStudents": "18", "notes": [], "rooms": [{"room": "6A2", "capacity": "33", "students": "18", "proctor": "Gerekmiyor", "departments": "YBS 6, SBUİ 5, UTF 3, HAV 2, LOJ 2"}]}, {"id": "exam-49", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "15:00", "end": "15:50", "courseCode": "20G1009", "course": "Dijital Okuryazarlık ve Yapay Zekâya Giriş", "programs": ["ETİC-?"], "teacher": "M. Evren ÇELİK SÜTİÇER", "totalStudents": "8", "notes": [], "rooms": [{"room": "6D4", "capacity": "25", "students": "8", "proctor": "Gerekmiyor", "departments": "Öğrenci 8"}]}, {"id": "exam-50", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "15:00", "end": "15:50", "courseCode": "2023G3009", "course": "Dijital Pazarlama Uygulamaları 2", "programs": ["ETİC-5"], "teacher": "M. Evren ÇELİK SÜTİÇER", "totalStudents": "9", "notes": [], "rooms": [{"room": "6D4", "capacity": "25", "students": "9", "proctor": "Gerekmiyor", "departments": "ETİC 9"}]}, {"id": "exam-51", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "15:00", "end": "15:50", "courseCode": "2016G4023", "course": "Dünya Siyasetinde Güncel Sorunlar", "programs": ["SBUİ-7"], "teacher": "Munise Nur AKTAN", "totalStudents": "55", "notes": ["3 dersliğe bölündü"], "rooms": [{"room": "6D1", "capacity": "17", "students": "17", "proctor": "Begüm İnanç", "departments": "SBUİ 17"}, {"room": "6D3", "capacity": "23", "students": "23", "proctor": "Seda Emir", "departments": "YBS 18, ETİC 3, HAV 2"}, {"room": "6D5", "capacity": "23", "students": "15", "proctor": "Merve Sevinç Sakar", "departments": "UTF 12, İŞL 2, LOJ 1"}]}, {"id": "exam-52", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "15:00", "end": "15:50", "courseCode": "2019G3001", "course": "Havayolu Taşımacılığı", "programs": ["LOJ-5"], "teacher": "Celil Durdağ", "totalStudents": "26", "notes": [], "rooms": [{"room": "6A2", "capacity": "33", "students": "26", "proctor": "Gerekmiyor", "departments": "LOJ 26"}]}, {"id": "exam-53", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "16:00", "end": "16:50", "courseCode": "2014G2007", "course": "Introduction to Marketing", "programs": ["BUS-3"], "teacher": "E. Erdinç GÜLBAŞ", "totalStudents": "25", "notes": [], "rooms": [{"room": "6D3", "capacity": "23", "students": "25", "proctor": "Gerekmiyor", "departments": "BUS 25"}]}, {"id": "exam-54", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "16:00", "end": "16:50", "courseCode": "20G3003", "course": "İnsan Kaynakları Yönetimi", "programs": ["HAV-3", "İŞL-3"], "teacher": "Ayşe Nur ÇİFTÇİ", "totalStudents": "49", "notes": ["2 dersliğe bölündü"], "rooms": [{"room": "6A2", "capacity": "33", "students": "24", "proctor": "Ozan Atalay", "departments": "İŞL 24"}, {"room": "6D4", "capacity": "25", "students": "25", "proctor": "Seda Emir", "departments": "HAV 25"}]}, {"id": "exam-55", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "16:00", "end": "16:50", "courseCode": "2021G3020", "course": "İnsan ve Bilgisayar Etkileşimi", "programs": ["YBS-5"], "teacher": "Mohammad NASERINIA", "totalStudents": "20", "notes": [], "rooms": [{"room": "6A1", "capacity": "35", "students": "20", "proctor": "Gerekmiyor", "departments": "YBS 20"}]}, {"id": "exam-56", "date": "2026-11-04", "dateLabel": "04.11.2026", "day": "Çarşamba", "start": "12:00", "end": "12:50", "courseCode": "20EG1005", "course": "Basic Concepts in Sociology", "programs": ["BUS-1", "PSIR-1"], "teacher": "Mehmet Cihan TOKER", "totalStudents": "27", "notes": [], "rooms": [{"room": "6D5", "capacity": "23", "students": "27", "proctor": "Gerekmiyor", "departments": "BUS 12, PSIR 15"}]}, {"id": "exam-57", "date": "2026-11-04", "dateLabel": "04.11.2026", "day": "Çarşamba", "start": "12:00", "end": "12:50", "courseCode": "2016G3003", "course": "International Law-I / Uluslararası Hukuk I", "programs": ["PSIR-5", "SBUİ-5"], "teacher": "Dikran M. ZENGİNKUZUCU", "totalStudents": "24", "notes": [], "rooms": [{"room": "6D4", "capacity": "25", "students": "24", "proctor": "Seda Emir", "departments": "PSIR 6, SBUİ 18"}]}, {"id": "exam-58", "date": "2026-11-04", "dateLabel": "04.11.2026", "day": "Çarşamba", "start": "12:00", "end": "12:50", "courseCode": "2019G4003", "course": "Lojistikte Modelleme ve Optimizasyon Teknikleri", "programs": ["LOJ-7"], "teacher": "Kerem Şahinboy", "totalStudents": "33", "notes": [], "rooms": [{"room": "6A2", "capacity": "33", "students": "33", "proctor": "Gerekmiyor", "departments": "LOJ 31, YBS 2"}]}, {"id": "exam-59", "date": "2026-11-04", "dateLabel": "04.11.2026", "day": "Çarşamba", "start": "12:00", "end": "12:50", "courseCode": "2023G4011", "course": "Marka Deneyimi ve Dijital Topluluklar", "programs": ["ETİC-7"], "teacher": "Alperen ŞAHİN", "totalStudents": "11", "notes": [], "rooms": [{"room": "6D1", "capacity": "17", "students": "11", "proctor": "Gerekmiyor", "departments": "ETİC 11"}]}, {"id": "exam-60", "date": "2026-11-04", "dateLabel": "04.11.2026", "day": "Çarşamba", "start": "12:00", "end": "12:50", "courseCode": "2022G2006", "course": "Microeconomics", "programs": ["ECF-3"], "teacher": "İlknur ŞİMŞEK", "totalStudents": "7", "notes": [], "rooms": [{"room": "6D3", "capacity": "23", "students": "7", "proctor": "Gerekmiyor", "departments": "ECF 7"}]}, {"id": "exam-61", "date": "2026-11-04", "dateLabel": "04.11.2026", "day": "Çarşamba", "start": "12:00", "end": "12:50", "courseCode": "2010B4007", "course": "Para ve Bankacılık", "programs": ["UTF-7", "İŞL-7"], "teacher": "Tuğba KOYUNCU ÇAKMAK", "totalStudents": "28", "notes": [], "rooms": [{"room": "6A1", "capacity": "35", "students": "28", "proctor": "Gerekmiyor", "departments": "İŞL 16, UTF 12"}]}, {"id": "exam-62", "date": "2026-11-04", "dateLabel": "04.11.2026", "day": "Çarşamba", "start": "13:00", "end": "13:50", "courseCode": "2017B4032", "course": "Innovation Management and Creativity", "programs": ["BUS-7", "ECF-7"], "teacher": "M. Sercan SEVİMLİ", "totalStudents": "9", "notes": [], "rooms": [{"room": "6D3", "capacity": "23", "students": "9", "proctor": "Gerekmiyor", "departments": "BUS 9"}]}, {"id": "exam-63", "date": "2026-11-04", "dateLabel": "04.11.2026", "day": "Çarşamba", "start": "13:00", "end": "13:50", "courseCode": "20B1003", "course": "Introduction to Economics-I (Şimşek)", "programs": ["ECF-1"], "teacher": "İlknur ŞİMŞEK", "totalStudents": "8", "notes": [], "rooms": [{"room": "6D1", "capacity": "17", "students": "8", "proctor": "Gerekmiyor", "departments": "ECF 8"}]}, {"id": "exam-64", "date": "2026-11-04", "dateLabel": "04.11.2026", "day": "Çarşamba", "start": "13:00", "end": "13:50", "courseCode": "2018G1001", "course": "Sivil Havacılık İşletmeciliğine Giriş", "programs": ["HAV-1"], "teacher": "Esma Görkem ERSOY", "totalStudents": "30", "notes": [], "rooms": [{"room": "6A2", "capacity": "33", "students": "30", "proctor": "Gerekmiyor", "departments": "HAV 30"}]}, {"id": "exam-65", "date": "2026-11-04", "dateLabel": "04.11.2026", "day": "Çarşamba", "start": "13:00", "end": "13:50", "courseCode": "2016G2006", "course": "Türkiye'de Anayasal Düzen", "programs": ["SBUİ-3"], "teacher": "Dikran M. ZENGİNKUZUCU", "totalStudents": "18", "notes": [], "rooms": [{"room": "6D5", "capacity": "23", "students": "18", "proctor": "Gerekmiyor", "departments": "SBUİ 18"}]}, {"id": "exam-66", "date": "2026-11-04", "dateLabel": "04.11.2026", "day": "Çarşamba", "start": "13:00", "end": "13:50", "courseCode": "2020G2003", "course": "Uluslararası İşletmecilik", "programs": ["UTF-3"], "teacher": "Zekeriya ŞAHİN", "totalStudents": "17", "notes": [], "rooms": [{"room": "6D4", "capacity": "25", "students": "17", "proctor": "Gerekmiyor", "departments": "UTF 17"}]}, {"id": "exam-67", "date": "2026-11-04", "dateLabel": "04.11.2026", "day": "Çarşamba", "start": "14:00", "end": "14:50", "courseCode": "20EB1006", "course": "Academic Writing Skills", "programs": ["ECF-1", "PSIR-1"], "teacher": "Ali KURT", "totalStudents": "24", "notes": [], "rooms": [{"room": "6A2", "capacity": "33", "students": "24", "proctor": "Gerekmiyor", "departments": "ECF 10, PSIR 14"}]}, {"id": "exam-68", "date": "2026-11-04", "dateLabel": "04.11.2026", "day": "Çarşamba", "start": "14:00", "end": "14:50", "courseCode": "2018G3004", "course": "Havacılıkta Stratejik Yönetim", "programs": ["HAV-5"], "teacher": "Esma Görkem ERSOY", "totalStudents": "36", "notes": ["2 dersliğe bölündü"], "rooms": [{"room": "6A1", "capacity": "35", "students": "22", "proctor": "Mehmet Deniz Nalbantoğlu", "departments": "HAV 22"}, {"room": "6D5", "capacity": "23", "students": "14", "proctor": "Gerekmiyor", "departments": "SBUİ 12, ETİC 2"}]}, {"id": "exam-69", "date": "2026-11-04", "dateLabel": "04.11.2026", "day": "Çarşamba", "start": "14:00", "end": "14:50", "courseCode": "2017G4021", "course": "Regional Studies: Eurasia", "programs": ["PSIR-7"], "teacher": "Erhan CANİKOĞLU", "totalStudents": "9", "notes": [], "rooms": [{"room": "6D1", "capacity": "17", "students": "9", "proctor": "Gerekmiyor", "departments": "PSIR 9"}]}, {"id": "exam-70", "date": "2026-11-04", "dateLabel": "04.11.2026", "day": "Çarşamba", "start": "15:00", "end": "15:50", "courseCode": "2023G2004", "course": "Dijital İşletmecilik", "programs": ["ETİC-3"], "teacher": "Ali BAKIN", "totalStudents": "8", "notes": [], "rooms": [{"room": "6D3", "capacity": "23", "students": "8", "proctor": "Gerekmiyor", "departments": "ETİC 8"}]}, {"id": "exam-71", "date": "2026-11-04", "dateLabel": "04.11.2026", "day": "Çarşamba", "start": "15:00", "end": "15:50", "courseCode": "2021B2006", "course": "Finansal Yönetim", "programs": ["UTF-5", "YBS-3", "İŞL-5"], "teacher": "Yağmur ÇETİNTAŞ", "totalStudents": "79", "notes": ["3 dersliğe bölündü"], "rooms": [{"room": "6A1", "capacity": "35", "students": "34", "proctor": "Hilal Önge", "departments": "İŞL 34"}, {"room": "6A2", "capacity": "33", "students": "33", "proctor": "Begüm İnanç", "departments": "YBS 33"}, {"room": "6D1", "capacity": "17", "students": "12", "proctor": "Kadriye Giray", "departments": "UTF 12"}]}, {"id": "exam-72", "date": "2026-11-04", "dateLabel": "04.11.2026", "day": "Çarşamba", "start": "15:00", "end": "15:50", "courseCode": "2018G2003", "course": "Havacılık Hukuku", "programs": ["HAV-3"], "teacher": "Misagh HAJIAMIRI", "totalStudents": "26", "notes": [], "rooms": [{"room": "6D4", "capacity": "25", "students": "26", "proctor": "Gerekmiyor", "departments": "HAV 26"}]}, {"id": "exam-73", "date": "2026-11-04", "dateLabel": "04.11.2026", "day": "Çarşamba", "start": "16:00", "end": "16:50", "courseCode": "2017G4023", "course": "Current Issues in World Politics", "programs": ["BUS-5", "PSIR-5"], "teacher": "Erhan CANİKOĞLU", "totalStudents": "18", "notes": [], "rooms": [{"room": "6D3", "capacity": "23", "students": "18", "proctor": "Gerekmiyor", "departments": "BUS 8, PSIR 10"}]}, {"id": "exam-74", "date": "2026-11-04", "dateLabel": "04.11.2026", "day": "Çarşamba", "start": "16:00", "end": "16:50", "courseCode": "2016G3005", "course": "Türkiye'de Siyasal Yapı ve Hayat I", "programs": ["SBUİ-5"], "teacher": "Munise Nur AKTAN", "totalStudents": "15", "notes": [], "rooms": [{"room": "6D5", "capacity": "23", "students": "15", "proctor": "Gerekmiyor", "departments": "SBUİ 15"}]}, {"id": "exam-75", "date": "2026-11-04", "dateLabel": "04.11.2026", "day": "Çarşamba", "start": "16:00", "end": "16:50", "courseCode": "2023G3008", "course": "İleri Web Tasarımı", "programs": ["ETİC-5"], "teacher": "Muhammed Gider", "totalStudents": "10", "notes": [], "rooms": [{"room": "6D1", "capacity": "17", "students": "10", "proctor": "Gerekmiyor", "departments": "ETİC 10"}]}, {"id": "exam-76", "date": "2026-11-04", "dateLabel": "04.11.2026", "day": "Çarşamba", "start": "17:00", "end": "17:50", "courseCode": "2014G2001", "course": "Business Finance", "programs": ["BUS-5", "ECF-5"], "teacher": "Murat BAYRAKTAR", "totalStudents": "35", "notes": [], "rooms": [{"room": "6A1", "capacity": "35", "students": "35", "proctor": "Gerekmiyor", "departments": "BUS 26, ECF 9"}]}, {"id": "exam-77", "date": "2026-11-05", "dateLabel": "05.11.2026", "day": "Perşembe", "start": "10:00", "end": "10:50", "courseCode": "2018G4001", "course": "Havacılık Güvenliği", "programs": ["HAV-7"], "teacher": "Misagh HAJIAMIRI", "totalStudents": "23", "notes": [], "rooms": [{"room": "6D3", "capacity": "23", "students": "23", "proctor": "Gerekmiyor", "departments": "HAV 23"}]}, {"id": "exam-78", "date": "2026-11-05", "dateLabel": "05.11.2026", "day": "Perşembe", "start": "10:00", "end": "10:50", "courseCode": "2010G4012", "course": "Marka Yönetimi", "programs": ["İŞL-7"], "teacher": "Alperen ŞAHİN", "totalStudents": "16", "notes": [], "rooms": [{"room": "6D1", "capacity": "17", "students": "16", "proctor": "Gerekmiyor", "departments": "İŞL 16"}]}, {"id": "exam-79", "date": "2026-11-05", "dateLabel": "05.11.2026", "day": "Perşembe", "start": "10:00", "end": "10:50", "courseCode": "2021G3016", "course": "Yöneylem Araştırması I", "programs": ["YBS-5"], "teacher": "Merve DOĞRUEL", "totalStudents": "35", "notes": [], "rooms": [{"room": "6A1", "capacity": "35", "students": "35", "proctor": "Hilal Önge", "departments": "YBS 35"}]}, {"id": "exam-80", "date": "2026-11-05", "dateLabel": "05.11.2026", "day": "Perşembe", "start": "11:00", "end": "11:50", "courseCode": "20G1010", "course": "İşletmeye Giriş", "programs": ["ETİC-1", "LOJ-1", "UTF-1", "YBS-3", "İŞL-1"], "teacher": "Ali BAKIN, Zekeriya ŞAHİN", "totalStudents": "134", "notes": ["6 dersliğe bölündü"], "rooms": [{"room": "6A1", "capacity": "35", "students": "35", "proctor": "Ozan Atalay", "departments": "LOJ 35"}, {"room": "6A2", "capacity": "33", "students": "29", "proctor": "Şeyma Sertçelik", "departments": "YBS 29"}, {"room": "6D1", "capacity": "17", "students": "17", "proctor": "Seda Emir", "departments": "İŞL 17"}, {"room": "6D3", "capacity": "23", "students": "17", "proctor": "Duygu Yayla Eldem", "departments": "İŞL 17"}, {"room": "6D4", "capacity": "25", "students": "26", "proctor": "Tahsin Mert Saygın", "departments": "UTF 26"}, {"room": "6D5", "capacity": "23", "students": "10", "proctor": "Gerekmiyor", "departments": "ETİC 10"}]}, {"id": "exam-81", "date": "2026-11-05", "dateLabel": "05.11.2026", "day": "Perşembe", "start": "12:00", "end": "12:50", "courseCode": "2017G2006", "course": "Constitutional Order in Turkey", "programs": ["PSIR-3"], "teacher": "Mehmet Cihan TOKER", "totalStudents": "10", "notes": [], "rooms": [{"room": "6A1", "capacity": "35", "students": "10", "proctor": "Gerekmiyor", "departments": "PSIR 10"}]}, {"id": "exam-82", "date": "2026-11-05", "dateLabel": "05.11.2026", "day": "Perşembe", "start": "12:00", "end": "12:50", "courseCode": "2014B3001", "course": "Global Marketing", "programs": ["BUS-5", "ECF-5"], "teacher": "M. Sercan SEVİMLİ", "totalStudents": "23", "notes": [], "rooms": [{"room": "6A2", "capacity": "33", "students": "23", "proctor": "Gerekmiyor", "departments": "BUS 18, PSIR 3, ECF 2"}]}, {"id": "exam-83", "date": "2026-11-05", "dateLabel": "05.11.2026", "day": "Perşembe", "start": "12:00", "end": "12:50", "courseCode": "2019G2001", "course": "Kentsel Lojistik", "programs": ["LOJ-3"], "teacher": "Celil Durdağ", "totalStudents": "12", "notes": [], "rooms": [{"room": "6D4", "capacity": "25", "students": "12", "proctor": "Gerekmiyor", "departments": "LOJ 12"}]}, {"id": "exam-84", "date": "2026-11-05", "dateLabel": "05.11.2026", "day": "Perşembe", "start": "12:00", "end": "12:50", "courseCode": "2016B4036", "course": "Politika ve Sanat", "programs": ["SBUİ-7"], "teacher": "Ali Emre ELDEM", "totalStudents": "6", "notes": [], "rooms": [{"room": "6D3", "capacity": "23", "students": "6", "proctor": "Gerekmiyor", "departments": "SBUİ 5, YBS 1"}]}, {"id": "exam-85", "date": "2026-11-05", "dateLabel": "05.11.2026", "day": "Perşembe", "start": "12:00", "end": "12:50", "courseCode": "2023G2007", "course": "Tüketici Davranışı", "programs": ["ETİC-3"], "teacher": "Alperen ŞAHİN", "totalStudents": "13", "notes": [], "rooms": [{"room": "6D5", "capacity": "23", "students": "13", "proctor": "Gerekmiyor", "departments": "ETİC 13"}]}, {"id": "exam-86", "date": "2026-11-05", "dateLabel": "05.11.2026", "day": "Perşembe", "start": "13:00", "end": "13:50", "courseCode": "2010G4017", "course": "Döngüsel Ekonomi", "programs": ["İŞL-7"], "teacher": "Ş. Onur VİGA", "totalStudents": "19", "notes": [], "rooms": [{"room": "6D3", "capacity": "23", "students": "19", "proctor": "Gerekmiyor", "departments": "İŞL 19"}]}, {"id": "exam-87", "date": "2026-11-05", "dateLabel": "05.11.2026", "day": "Perşembe", "start": "13:00", "end": "13:50", "courseCode": "2022G2008", "course": "History of Economic Thought", "programs": ["ECF-3"], "teacher": "Murat BAYRAKTAR", "totalStudents": "8", "notes": [], "rooms": [{"room": "6D1", "capacity": "17", "students": "8", "proctor": "Gerekmiyor", "departments": "ECF 8"}]}, {"id": "exam-88", "date": "2026-11-05", "dateLabel": "05.11.2026", "day": "Perşembe", "start": "13:00", "end": "13:50", "courseCode": "2016G3030", "course": "History of European Integration / Avrupa Bütünleşme Tarihi", "programs": ["PSIR-5", "SBUİ-5"], "teacher": "Duygu YAYLA ELDEM", "totalStudents": "74", "notes": ["2 dersliğe bölündü"], "rooms": [{"room": "6A1", "capacity": "35", "students": "43", "proctor": "Duygu Yayla Eldem", "departments": "LOJ 29, UTF 3, ETİC 1, İŞL 1, YBS 9"}, {"room": "6D4", "capacity": "25", "students": "31", "proctor": "Tunahan Başoğlu", "departments": "HAV 25, SBUİ 5, PSIR 1"}]}, {"id": "exam-89", "date": "2026-11-05", "dateLabel": "05.11.2026", "day": "Perşembe", "start": "14:00", "end": "14:50", "courseCode": "2018G4002", "course": "Havacılık Bakım Yönetimi", "programs": ["HAV-7"], "teacher": "Misagh HAJIAMIRI", "totalStudents": "24", "notes": [], "rooms": [{"room": "6D4", "capacity": "25", "students": "24", "proctor": "Gerekmiyor", "departments": "HAV 24"}]}, {"id": "exam-90", "date": "2026-11-05", "dateLabel": "05.11.2026", "day": "Perşembe", "start": "14:00", "end": "14:50", "courseCode": "20EG4009", "course": "Theory of international Trade", "programs": ["ECF-5"], "teacher": "Elif Nur EKEN", "totalStudents": "15", "notes": [], "rooms": [{"room": "6D5", "capacity": "23", "students": "15", "proctor": "Elif Nur Eken (dersin hocası)", "departments": "Öğrenci 15"}]}, {"id": "exam-91", "date": "2026-11-05", "dateLabel": "05.11.2026", "day": "Perşembe", "start": "14:00", "end": "14:50", "courseCode": "2021B2021", "course": "Örgütsel Davranış Araştırmaları", "programs": ["YBS-3", "İŞL-3"], "teacher": "M. Sercan SEVİMLİ", "totalStudents": "57", "notes": ["3 dersliğe bölündü"], "rooms": [{"room": "6A1", "capacity": "35", "students": "28", "proctor": "Merve Sevinç Sakar", "departments": "YBS 28"}, {"room": "6A2", "capacity": "33", "students": "15", "proctor": "Tahsin Mert Saygın", "departments": "İŞL 15"}, {"room": "6D3", "capacity": "23", "students": "14", "proctor": "Ozan Atalay", "departments": "İŞL 14"}]}, {"id": "exam-92", "date": "2026-11-05", "dateLabel": "05.11.2026", "day": "Perşembe", "start": "15:00", "end": "15:50", "courseCode": "2019G4008", "course": "Liman ve Terminal Yönetimi", "programs": ["LOJ-7"], "teacher": "Günay YEŞİLBAŞ", "totalStudents": "32", "notes": [], "rooms": [{"room": "6A2", "capacity": "33", "students": "32", "proctor": "Gerekmiyor", "departments": "LOJ 32"}]}, {"id": "exam-93", "date": "2026-11-05", "dateLabel": "05.11.2026", "day": "Perşembe", "start": "15:00", "end": "15:50", "courseCode": "2018G3002", "course": "Temel Harekat", "programs": ["HAV-5"], "teacher": "Misagh HAJIAMIRI", "totalStudents": "23", "notes": [], "rooms": [{"room": "6D3", "capacity": "23", "students": "23", "proctor": "Gerekmiyor", "departments": "HAV 23"}]}, {"id": "exam-94", "date": "2026-11-05", "dateLabel": "05.11.2026", "day": "Perşembe", "start": "15:00", "end": "15:50", "courseCode": "2017B4036", "course": "Terrorism and Intelligence", "programs": ["PSIR-5"], "teacher": "Erhan CANİKOĞLU", "totalStudents": "4", "notes": [], "rooms": [{"room": "6D1", "capacity": "17", "students": "4", "proctor": "Gerekmiyor", "departments": "PSIR 4"}]}, {"id": "exam-95", "date": "2026-11-05", "dateLabel": "05.11.2026", "day": "Perşembe", "start": "15:00", "end": "15:50", "courseCode": "2021G4014", "course": "Veri Madenciliği", "programs": ["YBS-7"], "teacher": "Merve DOĞRUEL", "totalStudents": "28", "notes": [], "rooms": [{"room": "6D4", "capacity": "25", "students": "28", "proctor": "Seda Emir", "departments": "YBS 28"}]}, {"id": "exam-96", "date": "2026-11-05", "dateLabel": "05.11.2026", "day": "Perşembe", "start": "16:00", "end": "16:50", "courseCode": "20G2004", "course": "Gümrük Mevzuatı ve Uygulamaları", "programs": ["LOJ-5", "UTF-5"], "teacher": "Kerem Şahinboy", "totalStudents": "44", "notes": ["2 dersliğe bölündü"], "rooms": [{"room": "6A2", "capacity": "33", "students": "33", "proctor": "Şeyma Sertçelik", "departments": "LOJ 29, HAV 2, İŞL 2"}, {"room": "6D1", "capacity": "17", "students": "11", "proctor": "Gerekmiyor", "departments": "UTF 10, SBUİ 1"}]}, {"id": "exam-97", "date": "2026-11-05", "dateLabel": "05.11.2026", "day": "Perşembe", "start": "16:00", "end": "16:50", "courseCode": "20B1003", "course": "Introduction to Economics-I (Bayraktar)", "programs": ["BUS-1", "PSIR-1"], "teacher": "Murat BAYRAKTAR", "totalStudents": "26", "notes": [], "rooms": [{"room": "6D4", "capacity": "25", "students": "26", "proctor": "Gerekmiyor", "departments": "BUS 11, PSIR 15"}]}, {"id": "exam-98", "date": "2026-11-05", "dateLabel": "05.11.2026", "day": "Perşembe", "start": "16:00", "end": "17:30", "courseCode": "2021G3012", "course": "Python Programlama", "programs": ["ETİC-5", "YBS-5"], "teacher": "Ülker BAŞAR", "totalStudents": "27", "notes": ["90 dakika"], "rooms": [{"room": "4D8", "capacity": "", "students": "27", "proctor": "Gerekmiyor", "departments": "YBS 22, ETİC 4, SBUİ 1"}]}, {"id": "exam-99", "date": "2026-11-05", "dateLabel": "05.11.2026", "day": "Perşembe", "start": "17:00", "end": "17:50", "courseCode": "2019G4001", "course": "Kombine Taşımacılığı", "programs": ["LOJ-7"], "teacher": "Günay YEŞİLBAŞ", "totalStudents": "32", "notes": [], "rooms": [{"room": "6A2", "capacity": "33", "students": "32", "proctor": "Gerekmiyor", "departments": "LOJ 32"}]}, {"id": "exam-100", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "10:00", "end": "10:50", "courseCode": "2016G2007", "course": "Diplomasi Tarihi I", "programs": ["SBUİ-3"], "teacher": "Ali Emre ELDEM", "totalStudents": "14", "notes": [], "rooms": [{"room": "6A1", "capacity": "35", "students": "14", "proctor": "Gerekmiyor", "departments": "SBUİ 14"}]}, {"id": "exam-101", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "10:00", "end": "10:50", "courseCode": "2017G2007", "course": "Diplomatic History I", "programs": ["PSIR-3"], "teacher": "Ali Emre ELDEM", "totalStudents": "13", "notes": [], "rooms": [{"room": "6A1", "capacity": "35", "students": "13", "proctor": "Gerekmiyor", "departments": "PSIR 13"}]}, {"id": "exam-102", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "10:00", "end": "10:50", "courseCode": "2018B3004", "course": "Hava Trafik Hizmetleri", "programs": ["HAV-5"], "teacher": "Misagh HAJIAMIRI", "totalStudents": "20", "notes": [], "rooms": [{"room": "6D3", "capacity": "23", "students": "20", "proctor": "Gerekmiyor", "departments": "HAV 20"}]}, {"id": "exam-103", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "10:00", "end": "11:30", "courseCode": "20G1001", "course": "Matematik I", "programs": ["YBS-1"], "teacher": "Ramazan PEHLİVAN", "totalStudents": "59", "notes": ["2 dersliğe bölündü", "90 dakika"], "rooms": [{"room": "6D4", "capacity": "25", "students": "29", "proctor": "Kadriye Giray", "departments": "YBS 29"}, {"room": "6D5", "capacity": "23", "students": "30", "proctor": "Tahsin Mert Saygın", "departments": "YBS 30"}]}, {"id": "exam-104", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "10:00", "end": "10:50", "courseCode": "2020G4001", "course": "Uluslararası Finansman", "programs": ["UTF-7"], "teacher": "Elif Nur EKEN", "totalStudents": "14", "notes": [], "rooms": [{"room": "6D1", "capacity": "17", "students": "14", "proctor": "Elif Nur Eken (dersin hocası)", "departments": "UTF 14"}]}, {"id": "exam-105", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "11:00", "end": "11:50", "courseCode": "2020G3001", "course": "Dış Ticaret İşlemleri Muhasebesi", "programs": ["UTF-5"], "teacher": "Aykut ALABAYIR", "totalStudents": "11", "notes": [], "rooms": [{"room": "6D1", "capacity": "17", "students": "11", "proctor": "Tunahan Başoğlu", "departments": "UTF 11"}]}, {"id": "exam-106", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "11:00", "end": "11:50", "courseCode": "20EG2002", "course": "Statistics", "programs": ["BUS-3", "ECF-3", "PSIR-3"], "teacher": "Vesam TALAB", "totalStudents": "54", "notes": ["2 dersliğe bölündü"], "rooms": [{"room": "6A2", "capacity": "33", "students": "33", "proctor": "Hilal Önge", "departments": "BUS 33"}, {"room": "6D3", "capacity": "23", "students": "21", "proctor": "Taha Gümüş", "departments": "ECF 11, PSIR 10"}]}, {"id": "exam-107", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "11:00", "end": "11:50", "courseCode": "20G3004", "course": "Tedarik Zinciri Yönetimi", "programs": ["LOJ-5"], "teacher": "Kerem Şahinboy", "totalStudents": "40", "notes": [], "rooms": [{"room": "6A1", "capacity": "35", "students": "40", "proctor": "Gerekmiyor", "departments": "LOJ 25, HAV 5, İŞL 4, SBUİ 3, ETİC 3"}]}, {"id": "exam-108", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "12:00", "end": "12:50", "courseCode": "2018G2002", "course": "Havaalanı Donanım ve Faliyetleri", "programs": ["HAV-3"], "teacher": "Misagh HAJIAMIRI", "totalStudents": "25", "notes": [], "rooms": [{"room": "6D4", "capacity": "25", "students": "25", "proctor": "Gerekmiyor", "departments": "HAV 25"}]}, {"id": "exam-109", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "12:00", "end": "12:50", "courseCode": "2021G4021", "course": "Karar Destek Sistemleri ve Çok Kriterli Karar Verme", "programs": ["YBS-7"], "teacher": "Mohammad NASERINIA", "totalStudents": "26", "notes": [], "rooms": [{"room": "6A2", "capacity": "33", "students": "26", "proctor": "Gerekmiyor", "departments": "YBS 26"}]}, {"id": "exam-110", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "13:00", "end": "13:50", "courseCode": "2023G4008", "course": "Mobil Cihazları Programlama", "programs": ["ETİC-5"], "teacher": "Samet YILDIRIM", "totalStudents": "10", "notes": [], "rooms": [{"room": "6D4", "capacity": "25", "students": "10", "proctor": "Gerekmiyor", "departments": "ETİC 10"}]}, {"id": "exam-111", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "13:00", "end": "13:50", "courseCode": "20G2002", "course": "İstatistik", "programs": ["LOJ-3", "SBUİ-3", "UTF-3", "İŞL-3"], "teacher": "Betül ÖZTEL", "totalStudents": "86", "notes": ["4 dersliğe bölündü"], "rooms": [{"room": "6A2", "capacity": "33", "students": "33", "proctor": "Begüm İnanç", "departments": "İŞL 32, HAV 1"}, {"room": "6D1", "capacity": "17", "students": "15", "proctor": "Elif Nur Eken", "departments": "LOJ 15"}, {"room": "6D3", "capacity": "23", "students": "19", "proctor": "Merve Sevinç Sakar", "departments": "SBUİ 19"}, {"room": "6D5", "capacity": "23", "students": "19", "proctor": "Şeyma Sertçelik", "departments": "UTF 19"}]}, {"id": "exam-112", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "14:00", "end": "14:50", "courseCode": "2019G4008", "course": "Endüstri 4.0 ve Lojistik Uygulamaları", "programs": ["LOJ-7", "İŞL-7"], "teacher": "Günay YEŞİLBAŞ", "totalStudents": "34", "notes": [], "rooms": [{"room": "6A1", "capacity": "35", "students": "34", "proctor": "Gerekmiyor", "departments": "LOJ 30, İŞL 2, HAV 1, YBS 1"}]}, {"id": "exam-113", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "14:00", "end": "14:50", "courseCode": "2014G4009", "course": "Managerial Leadership and Business Ethics", "programs": ["BUS-7", "ECF-7", "PSIR-7"], "teacher": "M. Sercan SEVİMLİ", "totalStudents": "35", "notes": [], "rooms": [{"room": "6A2", "capacity": "33", "students": "35", "proctor": "Tahsin Mert Saygın", "departments": "BUS 22, ECF 8, PSIR 5"}]}, {"id": "exam-114", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "14:00", "end": "15:30", "courseCode": "2021G3015", "course": "Web Programlama", "programs": ["YBS-5"], "teacher": "Ülker BAŞAR", "totalStudents": "22", "notes": ["90 dakika"], "rooms": [{"room": "4D8", "capacity": "", "students": "22", "proctor": "Gerekmiyor", "departments": "YBS 22"}]}, {"id": "exam-115", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "14:00", "end": "14:50", "courseCode": "2023G2006", "course": "Web Tasarımına Giriş I", "programs": ["ETİC-?"], "teacher": "Kübra Demir", "totalStudents": "12", "notes": [], "rooms": [{"room": "6D4", "capacity": "25", "students": "12", "proctor": "Gerekmiyor", "departments": "Öğrenci 12"}]}, {"id": "exam-116", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "14:00", "end": "14:50", "courseCode": "2018G2001", "course": "Yer Hizmetleri", "programs": ["HAV-3"], "teacher": "Misagh HAJIAMIRI", "totalStudents": "25", "notes": [], "rooms": [{"room": "6D5", "capacity": "23", "students": "25", "proctor": "Gerekmiyor", "departments": "HAV 25"}]}, {"id": "exam-117", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "15:00", "end": "15:50", "courseCode": "2017G4021", "course": "History of Turkish Economy", "programs": ["ECF-7"], "teacher": "Murat BAYRAKTAR", "totalStudents": "2", "notes": [], "rooms": [{"room": "6D1", "capacity": "17", "students": "2", "proctor": "Gerekmiyor", "departments": "ECF 2"}]}, {"id": "exam-118", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "15:00", "end": "15:50", "courseCode": "20G1003", "course": "İktisada Giriş I", "programs": ["HAV-1", "LOJ-1", "SBUİ-1", "UTF-1", "İŞL-1"], "teacher": "Tuğba KOYUNCU ÇAKMAK", "totalStudents": "190", "notes": ["3 dersliğe bölündü"], "rooms": [{"room": "3A1", "capacity": "90", "students": "28", "proctor": "Ozan Atalay, Taha Gümüş", "departments": "SBUİ 28"}, {"room": "3A3", "capacity": "85", "students": "72", "proctor": "Şeyma Sertçelik, Tahsin Mert Saygın", "departments": "UTF 28, LOJ 44"}, {"room": "3A5", "capacity": "60", "students": "90", "proctor": "Begüm İnanç, Hilal Önge", "departments": "İŞL 46, HAV 44"}]}, {"id": "exam-119", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "16:00", "end": "17:30", "courseCode": "2014G1009", "course": "Mathematics for Social Sciences-I", "programs": ["BUS-1", "ECF-1"], "teacher": "Vesam TALAB", "totalStudents": "36", "notes": ["2 dersliğe bölündü", "90 dakika"], "rooms": [{"room": "6D3", "capacity": "23", "students": "23", "proctor": "Kadriye Giray", "departments": "BUS 23"}, {"room": "6D5", "capacity": "23", "students": "13", "proctor": "Merve Sevinç Sakar", "departments": "ECF 13"}]}, {"id": "exam-120", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "16:00", "end": "16:50", "courseCode": "20G1007", "course": "Sosyal Bilimler için Matematik I", "programs": ["ETİC-1", "HAV-1", "LOJ-1", "UTF-1", "İŞL-1"], "teacher": "Betül ÖZTEL", "totalStudents": "188", "notes": ["3 dersliğe bölündü"], "rooms": [{"room": "3A6", "capacity": "50", "students": "52", "proctor": "Tunahan Başoğlu, Hilal Önge", "departments": "İŞL 52"}, {"room": "4A3", "capacity": "80", "students": "77", "proctor": "Melih Mert Oskay, Begüm İnanç", "departments": "UTF 29, HAV 48"}, {"room": "4A4", "capacity": "50", "students": "59", "proctor": "Elif Nur Eken, Ozan Atalay", "departments": "LOJ 43, ETİC 16"}]}], "assignments": [{"id": "exam-1", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "10:00", "end": "10:50", "courseCode": "20EG4009", "course": "Organizational Behavior", "programs": ["BUS-5", "ECF-5", "PSIR-5"], "teacher": "Açelya TELLİ", "totalStudents": "31", "examId": "exam-1", "room": "6A2", "roomStudents": "31", "proctor": "Tunahan Başoğlu", "note": ""}, {"id": "exam-3", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "10:00", "end": "10:50", "courseCode": "2021G1003", "course": "Yönetim Bilişim Sistemlerine Giriş", "programs": ["YBS-1"], "teacher": "Merve DOĞRUEL", "totalStudents": "38", "examId": "exam-3", "room": "6A1", "roomStudents": "38", "proctor": "Duygu Yayla Eldem", "note": ""}, {"id": "exam-5", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "11:00", "end": "11:50", "courseCode": "2075B1003", "course": "Information and Communication Technologies", "programs": ["BUS-1", "ECF-3", "PSIR-1"], "teacher": "Jumana ALHALİSİ", "totalStudents": "45", "examId": "exam-5", "room": "6D1", "roomStudents": "17", "proctor": "Melih Mert Oskay", "note": ""}, {"id": "exam-5", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "11:00", "end": "11:50", "courseCode": "2075B1003", "course": "Information and Communication Technologies", "programs": ["BUS-1", "ECF-3", "PSIR-1"], "teacher": "Jumana ALHALİSİ", "totalStudents": "45", "examId": "exam-5", "room": "6D5", "roomStudents": "28", "proctor": "Mehmet Deniz Nalbantoğlu", "note": ""}, {"id": "exam-6", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "11:00", "end": "11:50", "courseCode": "2016G4001", "course": "Siyaset Psikolojisi", "programs": ["SBUİ-7"], "teacher": "Duygu YAYLA ELDEM", "totalStudents": "21", "examId": "exam-6", "room": "6A1", "roomStudents": "21", "proctor": "Duygu Yayla Eldem", "note": ""}, {"id": "exam-9", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "12:00", "end": "12:50", "courseCode": "20G1002", "course": "Finansal Muhasebe I", "programs": ["HAV-3", "LOJ-3", "UTF-3", "İŞL-3"], "teacher": "Zekeriya ŞAHİN", "totalStudents": "86", "examId": "exam-9", "room": "6A2", "roomStudents": "25", "proctor": "Mehmet Deniz Nalbantoğlu", "note": ""}, {"id": "exam-9", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "12:00", "end": "12:50", "courseCode": "20G1002", "course": "Finansal Muhasebe I", "programs": ["HAV-3", "LOJ-3", "UTF-3", "İŞL-3"], "teacher": "Zekeriya ŞAHİN", "totalStudents": "86", "examId": "exam-9", "room": "6D3", "roomStudents": "18", "proctor": "Taha Gümüş", "note": ""}, {"id": "exam-9", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "12:00", "end": "12:50", "courseCode": "20G1002", "course": "Finansal Muhasebe I", "programs": ["HAV-3", "LOJ-3", "UTF-3", "İŞL-3"], "teacher": "Zekeriya ŞAHİN", "totalStudents": "86", "examId": "exam-9", "room": "6D4", "roomStudents": "25", "proctor": "Tunahan Başoğlu", "note": ""}, {"id": "exam-9", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "12:00", "end": "12:50", "courseCode": "20G1002", "course": "Finansal Muhasebe I", "programs": ["HAV-3", "LOJ-3", "UTF-3", "İŞL-3"], "teacher": "Zekeriya ŞAHİN", "totalStudents": "86", "examId": "exam-9", "room": "6D5", "roomStudents": "18", "proctor": "Melih Mert Oskay", "note": ""}, {"id": "exam-16", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "13:00", "end": "13:50", "courseCode": "2014G4012", "course": "Neuro-Marketing and Consumer Behaviour", "programs": ["BUS-7"], "teacher": "Açelya TELLİ", "totalStudents": "10", "examId": "exam-16", "room": "6D3", "roomStudents": "10", "proctor": "Ozan Atalay", "note": ""}, {"id": "exam-19", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "14:00", "end": "14:50", "courseCode": "2023G4001", "course": "Maliyet Muhasebesi", "programs": ["ETİC-7"], "teacher": "Hüşeyin YAŞAR", "totalStudents": "10", "examId": "exam-19", "room": "6D1", "roomStudents": "10", "proctor": "Melih Mert Oskay", "note": ""}, {"id": "exam-22", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "14:00", "end": "14:50", "courseCode": "2021G2008", "course": "İstatistik ve Olasılık", "programs": ["YBS-3"], "teacher": "Merve DOĞRUEL", "totalStudents": "41", "examId": "exam-22", "room": "6A2", "roomStudents": "41", "proctor": "Mehmet Deniz Nalbantoğlu", "note": ""}, {"id": "exam-24", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "15:00", "end": "15:50", "courseCode": "2020G4004", "course": "Küresel Rekabetçilik ve Rekabet Stratejisi", "programs": ["UTF-7"], "teacher": "İbrahim Bora ORAN", "totalStudents": "52", "examId": "exam-24", "room": "6D5", "roomStudents": "29", "proctor": "Taha Gümüş", "note": ""}, {"id": "exam-26", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "16:00", "end": "16:50", "courseCode": "20G1004", "course": "Bilgi ve İletişim Teknolojileri", "programs": ["ETİC-1", "HAV-1", "LOJ-1", "SBUİ-1", "UTF-1", "İŞL-1"], "teacher": "Elif Mutlu ERDOĞAN", "totalStudents": "166", "examId": "exam-26", "room": "6A1", "roomStudents": "33", "proctor": "Tunahan Başoğlu", "note": ""}, {"id": "exam-26", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "16:00", "end": "16:50", "courseCode": "20G1004", "course": "Bilgi ve İletişim Teknolojileri", "programs": ["ETİC-1", "HAV-1", "LOJ-1", "SBUİ-1", "UTF-1", "İŞL-1"], "teacher": "Elif Mutlu ERDOĞAN", "totalStudents": "166", "examId": "exam-26", "room": "6A2", "roomStudents": "36", "proctor": "Mehmet Deniz Nalbantoğlu", "note": ""}, {"id": "exam-26", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "16:00", "end": "16:50", "courseCode": "20G1004", "course": "Bilgi ve İletişim Teknolojileri", "programs": ["ETİC-1", "HAV-1", "LOJ-1", "SBUİ-1", "UTF-1", "İŞL-1"], "teacher": "Elif Mutlu ERDOĞAN", "totalStudents": "166", "examId": "exam-26", "room": "6D1", "roomStudents": "21", "proctor": "Duygu Yayla Eldem", "note": ""}, {"id": "exam-26", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "16:00", "end": "16:50", "courseCode": "20G1004", "course": "Bilgi ve İletişim Teknolojileri", "programs": ["ETİC-1", "HAV-1", "LOJ-1", "SBUİ-1", "UTF-1", "İŞL-1"], "teacher": "Elif Mutlu ERDOĞAN", "totalStudents": "166", "examId": "exam-26", "room": "6D3", "roomStudents": "20", "proctor": "Şeyma Sertçelik", "note": ""}, {"id": "exam-26", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "16:00", "end": "16:50", "courseCode": "20G1004", "course": "Bilgi ve İletişim Teknolojileri", "programs": ["ETİC-1", "HAV-1", "LOJ-1", "SBUİ-1", "UTF-1", "İŞL-1"], "teacher": "Elif Mutlu ERDOĞAN", "totalStudents": "166", "examId": "exam-26", "room": "6D4", "roomStudents": "28", "proctor": "Taha Gümüş", "note": ""}, {"id": "exam-26", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "16:00", "end": "16:50", "courseCode": "20G1004", "course": "Bilgi ve İletişim Teknolojileri", "programs": ["ETİC-1", "HAV-1", "LOJ-1", "SBUİ-1", "UTF-1", "İŞL-1"], "teacher": "Elif Mutlu ERDOĞAN", "totalStudents": "166", "examId": "exam-26", "room": "6D5", "roomStudents": "28", "proctor": "Melih Mert Oskay", "note": ""}, {"id": "exam-27", "date": "2026-11-02", "dateLabel": "02.11.2026", "day": "Pazartesi", "start": "17:00", "end": "17:50", "courseCode": "2016G4021", "course": "Bölgesel Çalışmalar : Avrasya", "programs": ["SBUİ-7"], "teacher": "Erhan CANİKOĞLU", "totalStudents": "50", "examId": "exam-27", "room": "6A2", "roomStudents": "40", "proctor": "Melih Mert Oskay", "note": ""}, {"id": "exam-30", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "10:00", "end": "10:50", "courseCode": "2022G4001", "course": "Derivatives and Risk Management", "programs": ["ECF-7"], "teacher": "Sudi APAK", "totalStudents": "2", "examId": "exam-30", "room": "6D5", "roomStudents": "2", "proctor": "Merve Sevinç Sakar", "note": ""}, {"id": "exam-33", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "10:00", "end": "10:50", "courseCode": "2020G3004", "course": "Uluslararası Ticari Örgütler", "programs": ["UTF-5"], "teacher": "Elif Nur EKEN", "totalStudents": "29", "examId": "exam-33", "room": "6A1", "roomStudents": "29", "proctor": "Elif Nur Eken", "note": ""}, {"id": "exam-42", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "12:00", "end": "12:50", "courseCode": "20EG2006", "course": "Introduction to Law", "programs": ["BUS-3", "ECF-1", "PSIR-1"], "teacher": "Dikran M. ZENGİNKUZUCU", "totalStudents": "45", "examId": "exam-42", "room": "6D1", "roomStudents": "16", "proctor": "Şeyma Sertçelik", "note": ""}, {"id": "exam-42", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "12:00", "end": "12:50", "courseCode": "20EG2006", "course": "Introduction to Law", "programs": ["BUS-3", "ECF-1", "PSIR-1"], "teacher": "Dikran M. ZENGİNKUZUCU", "totalStudents": "45", "examId": "exam-42", "room": "6D5", "roomStudents": "29", "proctor": "Begüm İnanç", "note": ""}, {"id": "exam-44", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "13:00", "end": "13:50", "courseCode": "20G2006", "course": "Temel Hukuk", "programs": ["LOJ-3", "SBUİ-1", "UTF-3", "YBS-1", "İŞL-3"], "teacher": "Mehmet Cihan TOKER", "totalStudents": "125", "examId": "exam-44", "room": "6A1", "roomStudents": "35", "proctor": "Mehmet Deniz Nalbantoğlu", "note": ""}, {"id": "exam-44", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "13:00", "end": "13:50", "courseCode": "20G2006", "course": "Temel Hukuk", "programs": ["LOJ-3", "SBUİ-1", "UTF-3", "YBS-1", "İŞL-3"], "teacher": "Mehmet Cihan TOKER", "totalStudents": "125", "examId": "exam-44", "room": "6A2", "roomStudents": "33", "proctor": "Hilal Önge", "note": ""}, {"id": "exam-44", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "13:00", "end": "13:50", "courseCode": "20G2006", "course": "Temel Hukuk", "programs": ["LOJ-3", "SBUİ-1", "UTF-3", "YBS-1", "İŞL-3"], "teacher": "Mehmet Cihan TOKER", "totalStudents": "125", "examId": "exam-44", "room": "6D1", "roomStudents": "15", "proctor": "Kadriye Giray", "note": ""}, {"id": "exam-44", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "13:00", "end": "13:50", "courseCode": "20G2006", "course": "Temel Hukuk", "programs": ["LOJ-3", "SBUİ-1", "UTF-3", "YBS-1", "İŞL-3"], "teacher": "Mehmet Cihan TOKER", "totalStudents": "125", "examId": "exam-44", "room": "6D3", "roomStudents": "22", "proctor": "Seda Emir", "note": ""}, {"id": "exam-44", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "13:00", "end": "13:50", "courseCode": "20G2006", "course": "Temel Hukuk", "programs": ["LOJ-3", "SBUİ-1", "UTF-3", "YBS-1", "İŞL-3"], "teacher": "Mehmet Cihan TOKER", "totalStudents": "125", "examId": "exam-44", "room": "6D5", "roomStudents": "20", "proctor": "Taha Gümüş", "note": ""}, {"id": "exam-51", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "15:00", "end": "15:50", "courseCode": "2016G4023", "course": "Dünya Siyasetinde Güncel Sorunlar", "programs": ["SBUİ-7"], "teacher": "Munise Nur AKTAN", "totalStudents": "55", "examId": "exam-51", "room": "6D1", "roomStudents": "17", "proctor": "Begüm İnanç", "note": ""}, {"id": "exam-51", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "15:00", "end": "15:50", "courseCode": "2016G4023", "course": "Dünya Siyasetinde Güncel Sorunlar", "programs": ["SBUİ-7"], "teacher": "Munise Nur AKTAN", "totalStudents": "55", "examId": "exam-51", "room": "6D3", "roomStudents": "23", "proctor": "Seda Emir", "note": ""}, {"id": "exam-51", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "15:00", "end": "15:50", "courseCode": "2016G4023", "course": "Dünya Siyasetinde Güncel Sorunlar", "programs": ["SBUİ-7"], "teacher": "Munise Nur AKTAN", "totalStudents": "55", "examId": "exam-51", "room": "6D5", "roomStudents": "15", "proctor": "Merve Sevinç Sakar", "note": ""}, {"id": "exam-54", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "16:00", "end": "16:50", "courseCode": "20G3003", "course": "İnsan Kaynakları Yönetimi", "programs": ["HAV-3", "İŞL-3"], "teacher": "Ayşe Nur ÇİFTÇİ", "totalStudents": "49", "examId": "exam-54", "room": "6A2", "roomStudents": "24", "proctor": "Ozan Atalay", "note": ""}, {"id": "exam-54", "date": "2026-11-03", "dateLabel": "03.11.2026", "day": "Salı", "start": "16:00", "end": "16:50", "courseCode": "20G3003", "course": "İnsan Kaynakları Yönetimi", "programs": ["HAV-3", "İŞL-3"], "teacher": "Ayşe Nur ÇİFTÇİ", "totalStudents": "49", "examId": "exam-54", "room": "6D4", "roomStudents": "25", "proctor": "Seda Emir", "note": ""}, {"id": "exam-57", "date": "2026-11-04", "dateLabel": "04.11.2026", "day": "Çarşamba", "start": "12:00", "end": "12:50", "courseCode": "2016G3003", "course": "International Law-I / Uluslararası Hukuk I", "programs": ["PSIR-5", "SBUİ-5"], "teacher": "Dikran M. ZENGİNKUZUCU", "totalStudents": "24", "examId": "exam-57", "room": "6D4", "roomStudents": "24", "proctor": "Seda Emir", "note": ""}, {"id": "exam-68", "date": "2026-11-04", "dateLabel": "04.11.2026", "day": "Çarşamba", "start": "14:00", "end": "14:50", "courseCode": "2018G3004", "course": "Havacılıkta Stratejik Yönetim", "programs": ["HAV-5"], "teacher": "Esma Görkem ERSOY", "totalStudents": "36", "examId": "exam-68", "room": "6A1", "roomStudents": "22", "proctor": "Mehmet Deniz Nalbantoğlu", "note": ""}, {"id": "exam-71", "date": "2026-11-04", "dateLabel": "04.11.2026", "day": "Çarşamba", "start": "15:00", "end": "15:50", "courseCode": "2021B2006", "course": "Finansal Yönetim", "programs": ["UTF-5", "YBS-3", "İŞL-5"], "teacher": "Yağmur ÇETİNTAŞ", "totalStudents": "79", "examId": "exam-71", "room": "6A1", "roomStudents": "34", "proctor": "Hilal Önge", "note": ""}, {"id": "exam-71", "date": "2026-11-04", "dateLabel": "04.11.2026", "day": "Çarşamba", "start": "15:00", "end": "15:50", "courseCode": "2021B2006", "course": "Finansal Yönetim", "programs": ["UTF-5", "YBS-3", "İŞL-5"], "teacher": "Yağmur ÇETİNTAŞ", "totalStudents": "79", "examId": "exam-71", "room": "6A2", "roomStudents": "33", "proctor": "Begüm İnanç", "note": ""}, {"id": "exam-71", "date": "2026-11-04", "dateLabel": "04.11.2026", "day": "Çarşamba", "start": "15:00", "end": "15:50", "courseCode": "2021B2006", "course": "Finansal Yönetim", "programs": ["UTF-5", "YBS-3", "İŞL-5"], "teacher": "Yağmur ÇETİNTAŞ", "totalStudents": "79", "examId": "exam-71", "room": "6D1", "roomStudents": "12", "proctor": "Kadriye Giray", "note": ""}, {"id": "exam-79", "date": "2026-11-05", "dateLabel": "05.11.2026", "day": "Perşembe", "start": "10:00", "end": "10:50", "courseCode": "2021G3016", "course": "Yöneylem Araştırması I", "programs": ["YBS-5"], "teacher": "Merve DOĞRUEL", "totalStudents": "35", "examId": "exam-79", "room": "6A1", "roomStudents": "35", "proctor": "Hilal Önge", "note": ""}, {"id": "exam-80", "date": "2026-11-05", "dateLabel": "05.11.2026", "day": "Perşembe", "start": "11:00", "end": "11:50", "courseCode": "20G1010", "course": "İşletmeye Giriş", "programs": ["ETİC-1", "LOJ-1", "UTF-1", "YBS-3", "İŞL-1"], "teacher": "Ali BAKIN, Zekeriya ŞAHİN", "totalStudents": "134", "examId": "exam-80", "room": "6A1", "roomStudents": "35", "proctor": "Ozan Atalay", "note": ""}, {"id": "exam-80", "date": "2026-11-05", "dateLabel": "05.11.2026", "day": "Perşembe", "start": "11:00", "end": "11:50", "courseCode": "20G1010", "course": "İşletmeye Giriş", "programs": ["ETİC-1", "LOJ-1", "UTF-1", "YBS-3", "İŞL-1"], "teacher": "Ali BAKIN, Zekeriya ŞAHİN", "totalStudents": "134", "examId": "exam-80", "room": "6A2", "roomStudents": "29", "proctor": "Şeyma Sertçelik", "note": ""}, {"id": "exam-80", "date": "2026-11-05", "dateLabel": "05.11.2026", "day": "Perşembe", "start": "11:00", "end": "11:50", "courseCode": "20G1010", "course": "İşletmeye Giriş", "programs": ["ETİC-1", "LOJ-1", "UTF-1", "YBS-3", "İŞL-1"], "teacher": "Ali BAKIN, Zekeriya ŞAHİN", "totalStudents": "134", "examId": "exam-80", "room": "6D1", "roomStudents": "17", "proctor": "Seda Emir", "note": ""}, {"id": "exam-80", "date": "2026-11-05", "dateLabel": "05.11.2026", "day": "Perşembe", "start": "11:00", "end": "11:50", "courseCode": "20G1010", "course": "İşletmeye Giriş", "programs": ["ETİC-1", "LOJ-1", "UTF-1", "YBS-3", "İŞL-1"], "teacher": "Ali BAKIN, Zekeriya ŞAHİN", "totalStudents": "134", "examId": "exam-80", "room": "6D3", "roomStudents": "17", "proctor": "Duygu Yayla Eldem", "note": ""}, {"id": "exam-80", "date": "2026-11-05", "dateLabel": "05.11.2026", "day": "Perşembe", "start": "11:00", "end": "11:50", "courseCode": "20G1010", "course": "İşletmeye Giriş", "programs": ["ETİC-1", "LOJ-1", "UTF-1", "YBS-3", "İŞL-1"], "teacher": "Ali BAKIN, Zekeriya ŞAHİN", "totalStudents": "134", "examId": "exam-80", "room": "6D4", "roomStudents": "26", "proctor": "Tahsin Mert Saygın", "note": ""}, {"id": "exam-88", "date": "2026-11-05", "dateLabel": "05.11.2026", "day": "Perşembe", "start": "13:00", "end": "13:50", "courseCode": "2016G3030", "course": "History of European Integration / Avrupa Bütünleşme Tarihi", "programs": ["PSIR-5", "SBUİ-5"], "teacher": "Duygu YAYLA ELDEM", "totalStudents": "74", "examId": "exam-88", "room": "6A1", "roomStudents": "43", "proctor": "Duygu Yayla Eldem", "note": ""}, {"id": "exam-88", "date": "2026-11-05", "dateLabel": "05.11.2026", "day": "Perşembe", "start": "13:00", "end": "13:50", "courseCode": "2016G3030", "course": "History of European Integration / Avrupa Bütünleşme Tarihi", "programs": ["PSIR-5", "SBUİ-5"], "teacher": "Duygu YAYLA ELDEM", "totalStudents": "74", "examId": "exam-88", "room": "6D4", "roomStudents": "31", "proctor": "Tunahan Başoğlu", "note": ""}, {"id": "exam-90", "date": "2026-11-05", "dateLabel": "05.11.2026", "day": "Perşembe", "start": "14:00", "end": "14:50", "courseCode": "20EG4009", "course": "Theory of international Trade", "programs": ["ECF-5"], "teacher": "Elif Nur EKEN", "totalStudents": "15", "examId": "exam-90", "room": "6D5", "roomStudents": "15", "proctor": "Elif Nur Eken", "note": ""}, {"id": "exam-91", "date": "2026-11-05", "dateLabel": "05.11.2026", "day": "Perşembe", "start": "14:00", "end": "14:50", "courseCode": "2021B2021", "course": "Örgütsel Davranış Araştırmaları", "programs": ["YBS-3", "İŞL-3"], "teacher": "M. Sercan SEVİMLİ", "totalStudents": "57", "examId": "exam-91", "room": "6A1", "roomStudents": "28", "proctor": "Merve Sevinç Sakar", "note": ""}, {"id": "exam-91", "date": "2026-11-05", "dateLabel": "05.11.2026", "day": "Perşembe", "start": "14:00", "end": "14:50", "courseCode": "2021B2021", "course": "Örgütsel Davranış Araştırmaları", "programs": ["YBS-3", "İŞL-3"], "teacher": "M. Sercan SEVİMLİ", "totalStudents": "57", "examId": "exam-91", "room": "6A2", "roomStudents": "15", "proctor": "Tahsin Mert Saygın", "note": ""}, {"id": "exam-91", "date": "2026-11-05", "dateLabel": "05.11.2026", "day": "Perşembe", "start": "14:00", "end": "14:50", "courseCode": "2021B2021", "course": "Örgütsel Davranış Araştırmaları", "programs": ["YBS-3", "İŞL-3"], "teacher": "M. Sercan SEVİMLİ", "totalStudents": "57", "examId": "exam-91", "room": "6D3", "roomStudents": "14", "proctor": "Ozan Atalay", "note": ""}, {"id": "exam-95", "date": "2026-11-05", "dateLabel": "05.11.2026", "day": "Perşembe", "start": "15:00", "end": "15:50", "courseCode": "2021G4014", "course": "Veri Madenciliği", "programs": ["YBS-7"], "teacher": "Merve DOĞRUEL", "totalStudents": "28", "examId": "exam-95", "room": "6D4", "roomStudents": "28", "proctor": "Seda Emir", "note": ""}, {"id": "exam-96", "date": "2026-11-05", "dateLabel": "05.11.2026", "day": "Perşembe", "start": "16:00", "end": "16:50", "courseCode": "20G2004", "course": "Gümrük Mevzuatı ve Uygulamaları", "programs": ["LOJ-5", "UTF-5"], "teacher": "Kerem Şahinboy", "totalStudents": "44", "examId": "exam-96", "room": "6A2", "roomStudents": "33", "proctor": "Şeyma Sertçelik", "note": ""}, {"id": "exam-103", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "10:00", "end": "11:30", "courseCode": "20G1001", "course": "Matematik I", "programs": ["YBS-1"], "teacher": "Ramazan PEHLİVAN", "totalStudents": "59", "examId": "exam-103", "room": "6D4", "roomStudents": "29", "proctor": "Kadriye Giray", "note": ""}, {"id": "exam-103", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "10:00", "end": "11:30", "courseCode": "20G1001", "course": "Matematik I", "programs": ["YBS-1"], "teacher": "Ramazan PEHLİVAN", "totalStudents": "59", "examId": "exam-103", "room": "6D5", "roomStudents": "30", "proctor": "Tahsin Mert Saygın", "note": ""}, {"id": "exam-104", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "10:00", "end": "10:50", "courseCode": "2020G4001", "course": "Uluslararası Finansman", "programs": ["UTF-7"], "teacher": "Elif Nur EKEN", "totalStudents": "14", "examId": "exam-104", "room": "6D1", "roomStudents": "14", "proctor": "Elif Nur Eken", "note": ""}, {"id": "exam-105", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "11:00", "end": "11:50", "courseCode": "2020G3001", "course": "Dış Ticaret İşlemleri Muhasebesi", "programs": ["UTF-5"], "teacher": "Aykut ALABAYIR", "totalStudents": "11", "examId": "exam-105", "room": "6D1", "roomStudents": "11", "proctor": "Tunahan Başoğlu", "note": ""}, {"id": "exam-106", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "11:00", "end": "11:50", "courseCode": "20EG2002", "course": "Statistics", "programs": ["BUS-3", "ECF-3", "PSIR-3"], "teacher": "Vesam TALAB", "totalStudents": "54", "examId": "exam-106", "room": "6A2", "roomStudents": "33", "proctor": "Hilal Önge", "note": ""}, {"id": "exam-106", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "11:00", "end": "11:50", "courseCode": "20EG2002", "course": "Statistics", "programs": ["BUS-3", "ECF-3", "PSIR-3"], "teacher": "Vesam TALAB", "totalStudents": "54", "examId": "exam-106", "room": "6D3", "roomStudents": "21", "proctor": "Taha Gümüş", "note": ""}, {"id": "exam-111", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "13:00", "end": "13:50", "courseCode": "20G2002", "course": "İstatistik", "programs": ["LOJ-3", "SBUİ-3", "UTF-3", "İŞL-3"], "teacher": "Betül ÖZTEL", "totalStudents": "86", "examId": "exam-111", "room": "6A2", "roomStudents": "33", "proctor": "Begüm İnanç", "note": ""}, {"id": "exam-111", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "13:00", "end": "13:50", "courseCode": "20G2002", "course": "İstatistik", "programs": ["LOJ-3", "SBUİ-3", "UTF-3", "İŞL-3"], "teacher": "Betül ÖZTEL", "totalStudents": "86", "examId": "exam-111", "room": "6D1", "roomStudents": "15", "proctor": "Elif Nur Eken", "note": ""}, {"id": "exam-111", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "13:00", "end": "13:50", "courseCode": "20G2002", "course": "İstatistik", "programs": ["LOJ-3", "SBUİ-3", "UTF-3", "İŞL-3"], "teacher": "Betül ÖZTEL", "totalStudents": "86", "examId": "exam-111", "room": "6D3", "roomStudents": "19", "proctor": "Merve Sevinç Sakar", "note": ""}, {"id": "exam-111", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "13:00", "end": "13:50", "courseCode": "20G2002", "course": "İstatistik", "programs": ["LOJ-3", "SBUİ-3", "UTF-3", "İŞL-3"], "teacher": "Betül ÖZTEL", "totalStudents": "86", "examId": "exam-111", "room": "6D5", "roomStudents": "19", "proctor": "Şeyma Sertçelik", "note": ""}, {"id": "exam-113", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "14:00", "end": "14:50", "courseCode": "2014G4009", "course": "Managerial Leadership and Business Ethics", "programs": ["BUS-7", "ECF-7", "PSIR-7"], "teacher": "M. Sercan SEVİMLİ", "totalStudents": "35", "examId": "exam-113", "room": "6A2", "roomStudents": "35", "proctor": "Tahsin Mert Saygın", "note": ""}, {"id": "exam-118", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "15:00", "end": "15:50", "courseCode": "20G1003", "course": "İktisada Giriş I", "programs": ["HAV-1", "LOJ-1", "SBUİ-1", "UTF-1", "İŞL-1"], "teacher": "Tuğba KOYUNCU ÇAKMAK", "totalStudents": "190", "examId": "exam-118", "room": "3A1", "roomStudents": "28", "proctor": "Ozan Atalay", "note": ""}, {"id": "exam-118", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "15:00", "end": "15:50", "courseCode": "20G1003", "course": "İktisada Giriş I", "programs": ["HAV-1", "LOJ-1", "SBUİ-1", "UTF-1", "İŞL-1"], "teacher": "Tuğba KOYUNCU ÇAKMAK", "totalStudents": "190", "examId": "exam-118", "room": "3A1", "roomStudents": "28", "proctor": "Taha Gümüş", "note": ""}, {"id": "exam-118", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "15:00", "end": "15:50", "courseCode": "20G1003", "course": "İktisada Giriş I", "programs": ["HAV-1", "LOJ-1", "SBUİ-1", "UTF-1", "İŞL-1"], "teacher": "Tuğba KOYUNCU ÇAKMAK", "totalStudents": "190", "examId": "exam-118", "room": "3A3", "roomStudents": "72", "proctor": "Şeyma Sertçelik", "note": ""}, {"id": "exam-118", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "15:00", "end": "15:50", "courseCode": "20G1003", "course": "İktisada Giriş I", "programs": ["HAV-1", "LOJ-1", "SBUİ-1", "UTF-1", "İŞL-1"], "teacher": "Tuğba KOYUNCU ÇAKMAK", "totalStudents": "190", "examId": "exam-118", "room": "3A3", "roomStudents": "72", "proctor": "Tahsin Mert Saygın", "note": ""}, {"id": "exam-118", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "15:00", "end": "15:50", "courseCode": "20G1003", "course": "İktisada Giriş I", "programs": ["HAV-1", "LOJ-1", "SBUİ-1", "UTF-1", "İŞL-1"], "teacher": "Tuğba KOYUNCU ÇAKMAK", "totalStudents": "190", "examId": "exam-118", "room": "3A5", "roomStudents": "90", "proctor": "Begüm İnanç", "note": ""}, {"id": "exam-118", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "15:00", "end": "15:50", "courseCode": "20G1003", "course": "İktisada Giriş I", "programs": ["HAV-1", "LOJ-1", "SBUİ-1", "UTF-1", "İŞL-1"], "teacher": "Tuğba KOYUNCU ÇAKMAK", "totalStudents": "190", "examId": "exam-118", "room": "3A5", "roomStudents": "90", "proctor": "Hilal Önge", "note": ""}, {"id": "exam-119", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "16:00", "end": "17:30", "courseCode": "2014G1009", "course": "Mathematics for Social Sciences-I", "programs": ["BUS-1", "ECF-1"], "teacher": "Vesam TALAB", "totalStudents": "36", "examId": "exam-119", "room": "6D3", "roomStudents": "23", "proctor": "Kadriye Giray", "note": ""}, {"id": "exam-119", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "16:00", "end": "17:30", "courseCode": "2014G1009", "course": "Mathematics for Social Sciences-I", "programs": ["BUS-1", "ECF-1"], "teacher": "Vesam TALAB", "totalStudents": "36", "examId": "exam-119", "room": "6D5", "roomStudents": "13", "proctor": "Merve Sevinç Sakar", "note": ""}, {"id": "exam-120", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "16:00", "end": "16:50", "courseCode": "20G1007", "course": "Sosyal Bilimler için Matematik I", "programs": ["ETİC-1", "HAV-1", "LOJ-1", "UTF-1", "İŞL-1"], "teacher": "Betül ÖZTEL", "totalStudents": "188", "examId": "exam-120", "room": "3A6", "roomStudents": "52", "proctor": "Tunahan Başoğlu", "note": ""}, {"id": "exam-120", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "16:00", "end": "16:50", "courseCode": "20G1007", "course": "Sosyal Bilimler için Matematik I", "programs": ["ETİC-1", "HAV-1", "LOJ-1", "UTF-1", "İŞL-1"], "teacher": "Betül ÖZTEL", "totalStudents": "188", "examId": "exam-120", "room": "3A6", "roomStudents": "52", "proctor": "Hilal Önge", "note": ""}, {"id": "exam-120", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "16:00", "end": "16:50", "courseCode": "20G1007", "course": "Sosyal Bilimler için Matematik I", "programs": ["ETİC-1", "HAV-1", "LOJ-1", "UTF-1", "İŞL-1"], "teacher": "Betül ÖZTEL", "totalStudents": "188", "examId": "exam-120", "room": "4A3", "roomStudents": "77", "proctor": "Melih Mert Oskay", "note": ""}, {"id": "exam-120", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "16:00", "end": "16:50", "courseCode": "20G1007", "course": "Sosyal Bilimler için Matematik I", "programs": ["ETİC-1", "HAV-1", "LOJ-1", "UTF-1", "İŞL-1"], "teacher": "Betül ÖZTEL", "totalStudents": "188", "examId": "exam-120", "room": "4A3", "roomStudents": "77", "proctor": "Begüm İnanç", "note": ""}, {"id": "exam-120", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "16:00", "end": "16:50", "courseCode": "20G1007", "course": "Sosyal Bilimler için Matematik I", "programs": ["ETİC-1", "HAV-1", "LOJ-1", "UTF-1", "İŞL-1"], "teacher": "Betül ÖZTEL", "totalStudents": "188", "examId": "exam-120", "room": "4A4", "roomStudents": "59", "proctor": "Elif Nur Eken", "note": ""}, {"id": "exam-120", "date": "2026-11-06", "dateLabel": "06.11.2026", "day": "Cuma", "start": "16:00", "end": "16:50", "courseCode": "20G1007", "course": "Sosyal Bilimler için Matematik I", "programs": ["ETİC-1", "HAV-1", "LOJ-1", "UTF-1", "İŞL-1"], "teacher": "Betül ÖZTEL", "totalStudents": "188", "examId": "exam-120", "room": "4A4", "roomStudents": "59", "proctor": "Ozan Atalay", "note": ""}], "teachers": ["Ali BAKIN", "Ali BAKIN, Zekeriya ŞAHİN", "Ali Emre ELDEM", "Ali KURT", "Alperen ŞAHİN", "Aykut ALABAYIR", "Ayşe Nur ÇİFTÇİ", "Açelya TELLİ", "Betül ÖZTEL", "Celil Durdağ", "Dikran M. ZENGİNKUZUCU", "Duygu YAYLA ELDEM", "E. Erdinç GÜLBAŞ", "Elif Mutlu ERDOĞAN", "Elif Nur EKEN", "Elif ŞİMŞEK", "Erhan CANİKOĞLU", "Esma Görkem ERSOY", "Günay YEŞİLBAŞ", "Hüşeyin YAŞAR", "Jumana ALHALİSİ", "Kadir BAL", "Kemal ER", "Kerem Şahinboy", "Kübra Demir", "M. Evren ÇELİK SÜTİÇER", "M. Sercan SEVİMLİ", "Mehmet Cihan TOKER", "Merve DOĞRUEL", "Misagh HAJIAMIRI", "Mohammad NASERINIA", "Muhammed Gider", "Munise Nur AKTAN", "Murat BAYRAKTAR", "Ramazan PEHLİVAN", "Samet YILDIRIM", "Sudi APAK", "Tuğba KOYUNCU ÇAKMAK", "Vesam TALAB", "Yağmur ÇETİNTAŞ", "Zekeriya ŞAHİN", "Ülker BAŞAR", "İbrahim Bora ORAN", "İlknur ŞİMŞEK", "Ş. Onur VİGA"], "proctors": ["Begüm İnanç", "Duygu Yayla Eldem", "Elif Nur Eken", "Hilal Önge", "Kadriye Giray", "Mehmet Deniz Nalbantoğlu", "Melih Mert Oskay", "Merve Sevinç Sakar", "Ozan Atalay", "Seda Emir", "Taha Gümüş", "Tahsin Mert Saygın", "Tunahan Başoğlu", "Şeyma Sertçelik"]};
+
+    const $ = (selector, root) => (root || document).querySelector(selector);
+    const $$ = (selector, root) => Array.from((root || document).querySelectorAll(selector));
+
+    function esc(value) {
+      return String(value == null ? "" : value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    function trLower(value) {
+      return String(value || "").toLocaleLowerCase("tr-TR");
+    }
+
+    function programsHtml(programs) {
+      return '<div class="programs-block"><span class="detail-label">Programlar</span><div class="program-tags">' + programs.map(function (program) {
+        return '<span class="program-tag" data-dept="' + esc(program.split(/[-(]/)[0]) + '">' + esc(program) + '</span>';
+      }).join("") + '</div></div>';
+    }
+
+    function roomRowsHtml(rooms) {
+      return '<div class="room-table">' + rooms.map(function (room) {
+        const proctor = room.proctor === "Gerekmiyor" ? "Dersin hocası (gözetmen gerekmiyor)" : room.proctor;
+        const studentText = room.students !== "" ? esc(room.students) : "Belirtilmemiş";
+        const capacityText = room.capacity !== "" ? esc(room.capacity) : "Belirtilmemiş";
+        return '<div class="room-row">' +
+          '<div class="room-name"><span class="detail-label">Derslik</span><strong>' + esc(room.room || "Belirtilmemiş") + '</strong></div>' +
+          '<div class="room-proctor"><span class="detail-label">Gözetmen</span>' + esc(proctor || "Gözetmen belirtilmemiş") + '</div>' +
+          '<div class="student-count"><span class="detail-label">Öğrenci</span>' + studentText + '</div>' +
+          '<div class="room-capacity"><span class="detail-label">Kapasite</span>' + capacityText + '</div>' +
+          (room.departments ? '<div class="room-departments"><span class="detail-label">Bu derslikteki bölümler</span>' + esc(room.departments) + '</div>' : '') +
+        '</div>';
+      }).join("") + '</div>';
+    }
+
+    function examCardHtml(exam) {
+      const teacher = exam.teacher || "Öğretim elemanı belirtilmemiş";
+      const code = exam.courseCode || "Ders kodu belirtilmemiş";
+      const notes = (exam.notes || []).filter(Boolean);
+      const note = notes.length
+        ? '<div class="exam-note"><strong>Not:</strong> ' + notes.map(esc).join(" · ") + '</div>'
+        : "";
+      const totalStudents = exam.totalStudents !== "" ? esc(exam.totalStudents) : "Belirtilmemiş";
+
+      return '<article class="exam-card">' +
+        '<div class="exam-main">' +
+          '<div class="exam-time"><span class="detail-label">Saat</span>' + esc(exam.start) + '–' + esc(exam.end) + '</div>' +
+          '<div>' +
+            '<h4 class="exam-title">' + esc(exam.course) + '</h4>' +
+            '<div class="exam-details">' +
+              '<div><span class="detail-label">Ders kodu</span>' + esc(code) + '</div>' +
+              '<div><span class="detail-label">Tarih</span>' + esc(exam.dateLabel) + ' ' + esc(exam.day) + '</div>' +
+              '<div><span class="detail-label">Öğretim elemanı</span>' + esc(teacher) + '</div>' +
+              '<div><span class="detail-label">Toplam öğrenci</span>' + totalStudents + '</div>' +
+            '</div>' +
+            programsHtml(exam.programs) +
+          '</div>' +
+        '</div>' +
+        roomRowsHtml(exam.rooms) +
+        note +
+      '</article>';
+    }
+
+    function groupByDate(items) {
+      const groups = [];
+      items.forEach(function (item) {
+        let group = groups.find(function (candidate) { return candidate.date === item.date; });
+        if (!group) {
+          group = { date: item.date, dateLabel: item.dateLabel, day: item.day, items: [] };
+          groups.push(group);
+        }
+        group.items.push(item);
+      });
+      return groups;
+    }
+
+    function scheduleHtml(items, cardRenderer) {
+      if (!items.length) {
+        return '<div class="placeholder"><div><strong>Sınav bulunamadı</strong>Bu seçim için programda sınav yer almıyor.</div></div>';
+      }
+      return groupByDate(items).map(function (group) {
+        return '<section class="day-group">' +
+          '<h4 class="day-heading" data-day="' + esc(group.day) + '">' + esc(group.dateLabel) + ' ' + esc(group.day) + '</h4>' +
+          '<div class="exam-list">' + group.items.map(cardRenderer).join("") + '</div>' +
+        '</section>';
+      }).join("");
+    }
+
+    function selectionHeader(title, count, noun) {
+      return '<div class="selection-header"><div><h3>' + esc(title) + '</h3>' +
+        '<p>' + count + ' ' + noun + '</p></div></div>';
+    }
+
+    function activatePage(pageName, updateHash) {
+      $$(".tab-button").forEach(function (button) {
+        button.setAttribute("aria-selected", String(button.dataset.page === pageName));
+      });
+      $$(".page").forEach(function (page) {
+        page.hidden = page.id !== "page-" + pageName;
+      });
+      if (updateHash) {
+        const hashes = { schedule: "sinav-programi", teachers: "ogretim-uyeleri", proctors: "gozetmenler" };
+        history.replaceState(null, "", "#" + hashes[pageName]);
+      }
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    $$(".tab-button").forEach(function (button) {
+      button.addEventListener("click", function () {
+        activatePage(button.dataset.page, true);
+      });
+    });
+
+    function initDepartments() {
+      const grid = $("#department-grid");
+      grid.innerHTML = DATA.departments.map(function (department) {
+        return '<button class="department-button" type="button" data-code="' + esc(department.code) + '" aria-pressed="false">' +
+          '<span class="department-code">' + esc(department.code) + '</span>' +
+          '<span class="department-name">' + esc(department.name) + '</span>' +
+          '<span class="department-language">' + esc(department.language) + '</span>' +
+        '</button>';
+      }).join("");
+
+      grid.addEventListener("click", function (event) {
+        const button = event.target.closest(".department-button");
+        if (!button) return;
+        $$(".department-button", grid).forEach(function (item) {
+          item.setAttribute("aria-pressed", String(item === button));
+        });
+        const department = DATA.departments.find(function (item) { return item.code === button.dataset.code; });
+        const exams = DATA.exams.filter(function (exam) {
+          return exam.programs.some(function (program) {
+            return program.indexOf(department.code + "-") === 0;
+          });
+        });
+        const target = $("#department-detail");
+        target.innerHTML = selectionHeader(department.name, exams.length, "sınav") +
+          scheduleHtml(exams, function (exam) { return examCardHtml(exam); });
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    }
+
+    function personCounts(type) {
+      const counts = {};
+      if (type === "teacher") {
+        DATA.teachers.forEach(function (name) {
+          counts[name] = DATA.exams.filter(function (exam) { return exam.teacher === name; }).length;
+        });
+      } else {
+        DATA.proctors.forEach(function (name) {
+          counts[name] = new Set(DATA.assignments.filter(function (item) {
+            return item.proctor === name;
+          }).map(function (item) { return item.examId; })).size;
+        });
+      }
+      return counts;
+    }
+
+    function initDirectory(config) {
+      const names = config.names;
+      const list = $(config.list);
+      const detail = $(config.detail);
+      const search = $(config.search);
+      const reset = config.reset ? $(config.reset) : null;
+      const selectionStatus = config.selectionStatus ? $(config.selectionStatus) : null;
+      const counts = personCounts(config.type);
+      const selected = new Set();
+
+      function renderList(query) {
+        const normalized = trLower(query);
+        const filtered = names.filter(function (name) {
+          return trLower(name).indexOf(normalized) !== -1;
+        });
+        if (!filtered.length) {
+          list.innerHTML = '<div class="empty-list">Aramanızla eşleşen isim bulunamadı.</div>';
+          return;
+        }
+        list.innerHTML = filtered.map(function (name) {
+          return '<button class="person-button" type="button" data-name="' + esc(name) + '" aria-pressed="' + String(selected.has(name)) + '">' +
+            '<span>' + esc(name) + '</span>' + (config.type === "teacher" ? '<span class="person-count">' + counts[name] + '</span>' : '') +
+          '</button>';
+        }).join("");
+      }
+
+      function renderDetail() {
+        const selectedNames = Array.from(selected);
+        if (reset) reset.disabled = selectedNames.length === 0;
+        if (selectionStatus) {
+          selectionStatus.textContent = selectedNames.length
+            ? selectedNames.length + " öğretim üyesi seçildi"
+            : "Seçim yapılmadı";
+        }
+
+        if (!selectedNames.length) {
+          const personLabel = config.type === "teacher" ? "Öğretim üyesi" : "Gözetmen";
+          const instruction = config.multiple
+            ? "Soldaki listeden bir veya birden fazla isim seçin."
+            : "Soldaki listeden bir isme tıklayın.";
+          detail.innerHTML = '<div class="placeholder"><div><strong>' + personLabel + ' seçin</strong>' + instruction + '</div></div>';
+          return;
+        }
+
+        let items;
+        if (config.type === "teacher") {
+          items = DATA.exams.filter(function (exam) { return selected.has(exam.teacher); });
+        } else {
+          const examIds = new Set(DATA.assignments.filter(function (item) {
+            return selected.has(item.proctor);
+          }).map(function (item) { return item.examId; }));
+          items = DATA.exams.filter(function (exam) { return examIds.has(exam.id); });
+        }
+
+        const title = selectedNames.length === 1
+          ? selectedNames[0]
+          : selectedNames.length + " öğretim üyesi: " + selectedNames.join(", ");
+        detail.innerHTML = selectionHeader(title, config.type === "teacher" ? items.length : "", config.type === "teacher" ? "sınav" : "Görevli olduğu sınavlar") +
+          scheduleHtml(items, examCardHtml);
+      }
+
+      renderList("");
+      search.addEventListener("input", function () { renderList(search.value); });
+      list.addEventListener("click", function (event) {
+        const button = event.target.closest(".person-button");
+        if (!button) return;
+        const name = button.dataset.name;
+        if (config.multiple) {
+          if (selected.has(name)) selected.delete(name);
+          else selected.add(name);
+        } else {
+          selected.clear();
+          selected.add(name);
+        }
+        renderList(search.value);
+        renderDetail();
+        if (window.innerWidth <= 820) {
+          detail.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+      if (reset) {
+        reset.addEventListener("click", function () {
+          selected.clear();
+          renderList(search.value);
+          renderDetail();
+        });
+      }
+    }
+
+    $("#schedule-summary").textContent = DATA.meta.examCount + " sınav · " + DATA.meta.period;
+    $("#teacher-summary").textContent = DATA.meta.teacherCount + " öğretim elemanı";
+    $("#proctor-summary").textContent = DATA.meta.proctorCount + " gözetmen";
+
+    initDepartments();
+    initDirectory({
+      type: "teacher",
+      names: DATA.teachers,
+      list: "#teacher-list",
+      detail: "#teacher-detail",
+      search: "#teacher-search",
+      reset: "#teacher-reset",
+      selectionStatus: "#teacher-selection-status",
+      multiple: true
+    });
+    initDirectory({
+      type: "proctor",
+      names: DATA.proctors,
+      list: "#proctor-list",
+      detail: "#proctor-detail",
+      search: "#proctor-search"
+    });
+
+    const initialHash = location.hash.replace("#", "");
+    const pageByHash = {
+      "sinav-programi": "schedule",
+      "ogretim-uyeleri": "teachers",
+      "gozetmenler": "proctors"
+    };
+    activatePage(pageByHash[initialHash] || "schedule", false);
+  </script>
+</body>
+</html>
