@@ -658,6 +658,141 @@
       .directory-layout { display: block; }
       .exam-card { break-inside: avoid; box-shadow: none; }
     }
+    /* ---- isim ızgarası, kişi ve sınav kartları (açılır pencere) ---- */
+    .name-filter { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
+    .name-filter .search-input { flex: 1 1 240px; width: auto; }
+    .filter-select {
+      flex: 0 1 260px;
+      min-width: 0;
+      padding: 11px 12px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      color: var(--ink);
+      background: #fff;
+      font: inherit;
+    }
+    .name-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; }
+    .name-card {
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      color: var(--navy);
+      background: #fff;
+      font: inherit;
+      font-weight: 700;
+      text-align: left;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+    }
+    .name-card:hover, .name-card:focus-visible { border-color: var(--accent, var(--blue)); color: var(--accent, var(--blue)); }
+    .name-grid .empty-list { grid-column: 1 / -1; }
+    #department-detail .exam-card { cursor: pointer; }
+    #department-detail .exam-card:hover { box-shadow: 0 10px 30px rgba(19, 47, 76, .16); }
+
+    .modal {
+      width: min(820px, calc(100vw - 24px));
+      max-height: calc(100vh - 32px);
+      padding: 0;
+      border: 0;
+      border-radius: 18px;
+      color: var(--ink);
+      background: #fff;
+      box-shadow: 0 22px 60px rgba(2, 17, 31, .32);
+    }
+    .modal[open] { display: flex; flex-direction: column; }
+    .modal::backdrop { background: rgba(10, 25, 40, .55); }
+    .modal-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 18px 20px 14px;
+      border-bottom: 1px solid var(--line);
+    }
+    .modal-head h3 { margin: 0; color: var(--navy); font-size: 1.25rem; }
+    .modal-kicker { margin: 0 0 2px; color: var(--muted); font-size: .78rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
+    .modal-close {
+      flex: none;
+      width: 36px;
+      height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      color: var(--navy);
+      background: #fff;
+      font-size: 1.3rem;
+      line-height: 1;
+      cursor: pointer;
+    }
+    .modal-body { padding: 16px 20px 22px; overflow: auto; }
+    .view-toggle { display: inline-flex; gap: 4px; margin-bottom: 14px; padding: 4px; border-radius: 12px; background: var(--canvas); }
+    .view-toggle button {
+      padding: 8px 14px;
+      border: 0;
+      border-radius: 9px;
+      color: var(--muted);
+      background: transparent;
+      font: inherit;
+      font-size: .9rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .view-toggle button[aria-pressed="true"] { color: #fff; background: var(--navy-2); }
+
+    .course-list { margin: 0; padding: 0; list-style: none; border: 1px solid var(--line); border-radius: 12px; }
+    .course-list li + li { border-top: 1px solid var(--line); }
+    .course-row {
+      width: 100%;
+      padding: 11px 14px;
+      border: 0;
+      color: var(--ink);
+      background: transparent;
+      font: inherit;
+      text-align: left;
+      cursor: pointer;
+    }
+    .course-row:hover, .course-row:focus-visible { color: var(--blue); background: var(--blue-soft); }
+
+    .week-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; }
+    .week-table { width: 100%; min-width: 640px; border-collapse: collapse; table-layout: fixed; font-size: .82rem; }
+    .week-table th { padding: 8px 6px; color: var(--navy); background: var(--canvas); font-weight: 800; text-align: center; }
+    .week-table th small { display: block; color: var(--muted); font-weight: 600; }
+    .week-table th:first-child { width: 62px; }
+    .week-table td { height: 46px; padding: 4px; border-top: 1px solid var(--line); border-left: 1px solid var(--line); vertical-align: top; }
+    .week-table tbody th { border-top: 1px solid var(--line); vertical-align: top; }
+    .cal-item {
+      display: block;
+      width: 100%;
+      margin-bottom: 4px;
+      padding: 6px 7px;
+      border: 0;
+      border-left: 3px solid var(--blue);
+      border-radius: 7px;
+      color: var(--navy);
+      background: var(--blue-soft);
+      font: inherit;
+      text-align: left;
+      cursor: pointer;
+    }
+    .cal-item:last-child { margin-bottom: 0; }
+    .cal-item strong { display: block; font-size: .8rem; line-height: 1.25; }
+    .cal-item span { display: block; margin-top: 2px; color: var(--muted); font-size: .75rem; font-weight: 700; }
+    .cal-item:hover { background: #d6eaf8; }
+
+    #exam-modal .exam-card { border: 0; box-shadow: none; padding: 0; }
+    #exam-modal .exam-title { display: none; }
+    .envelope-title { margin: 0 0 12px; color: var(--navy); font-weight: 800; }
+    .dev-badge { color: var(--warning); font-weight: 700; }
+    .envelope-list { margin: 0; padding: 0; list-style: none; border: 1px solid var(--line); border-radius: 12px; }
+    .envelope-list li { display: flex; align-items: flex-start; gap: 12px; padding: 12px 14px; color: var(--muted); }
+    .envelope-list li + li { border-top: 1px solid var(--line); }
+    .envelope-list input { flex: none; width: 20px; height: 20px; margin: 1px 0 0; cursor: not-allowed; }
+    .cabinet { display: inline-block; margin-left: 4px; padding: 1px 8px; border-radius: 999px; background: var(--canvas); font-size: .8rem; font-weight: 700; }
+
+    @media (max-width: 560px) {
+      .modal { width: 100vw; max-width: 100vw; max-height: 100dvh; height: 100dvh; margin: 0; border-radius: 0; }
+      .modal-head, .modal-body { padding-left: 16px; padding-right: 16px; }
+      .name-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body class="access-locked">
@@ -711,54 +846,70 @@
       <div class="page-heading">
         <div>
           <h2>Öğretim Üyeleri</h2>
-          <p>Bir veya birden fazla öğretim üyesini seçerek sorumlu oldukları sınavları birlikte görüntüleyin.</p>
+          <p>Bir isme tıklayarak sorumlu olduğu sınavları liste veya haftalık takvim olarak görüntüleyin.</p>
         </div>
         <span class="summary-pill" id="teacher-summary"></span>
       </div>
-      <div class="directory-layout">
-        <aside class="directory-panel">
-          <div class="search-wrap">
-            <label class="sr-only" for="teacher-search">Öğretim üyesi ara</label>
-            <input class="search-input" id="teacher-search" type="search" placeholder="İsim ara…" autocomplete="off">
-            <div class="directory-tools">
-              <span class="selection-status" id="teacher-selection-status">Seçim yapılmadı</span>
-              <button class="reset-button" id="teacher-reset" type="button" disabled>Seçimleri sıfırla</button>
-            </div>
-          </div>
-          <div class="person-list" id="teacher-list"></div>
-        </aside>
-        <div class="detail-panel" id="teacher-detail">
-          <div class="placeholder">
-            <div><strong>Öğretim üyesi seçin</strong>Soldaki listeden bir veya birden fazla isim seçin.</div>
-          </div>
-        </div>
+      <div class="name-filter">
+        <label class="sr-only" for="teacher-search">Öğretim üyesi ara</label>
+        <input class="search-input" id="teacher-search" type="search" placeholder="İsim ara…" autocomplete="off">
+        <label class="sr-only" for="teacher-dept">Bölüm</label>
+        <select class="filter-select" id="teacher-dept"></select>
       </div>
+      <div class="name-grid" id="teacher-grid"></div>
     </section>
 
     <section class="page" id="page-proctors" role="tabpanel" aria-labelledby="tab-proctors" hidden>
       <div class="page-heading">
         <div>
           <h2>Gözetmenler</h2>
-          <p>Bir gözetmeni seçerek görevli olduğu sınavları ve derslikleri görüntüleyin.</p>
+          <p>Bir isme tıklayarak görevli olduğu sınavları liste veya haftalık takvim olarak görüntüleyin.</p>
         </div>
         <span class="summary-pill" id="proctor-summary"></span>
       </div>
-      <div class="directory-layout">
-        <aside class="directory-panel">
-          <div class="search-wrap">
-            <label class="sr-only" for="proctor-search">Gözetmen ara</label>
-            <input class="search-input" id="proctor-search" type="search" placeholder="İsim ara…" autocomplete="off">
-          </div>
-          <div class="person-list" id="proctor-list"></div>
-        </aside>
-        <div class="detail-panel" id="proctor-detail">
-          <div class="placeholder">
-            <div><strong>Gözetmen seçin</strong>Soldaki listeden bir isme tıklayın.</div>
-          </div>
-        </div>
+      <div class="name-filter">
+        <label class="sr-only" for="proctor-search">Gözetmen ara</label>
+        <input class="search-input" id="proctor-search" type="search" placeholder="İsim ara…" autocomplete="off">
+        <label class="sr-only" for="proctor-dept">Bölüm</label>
+        <select class="filter-select" id="proctor-dept"></select>
       </div>
+      <div class="name-grid" id="proctor-grid"></div>
     </section>
   </main>
+
+  <dialog class="modal" id="person-modal" aria-labelledby="person-modal-title">
+    <div class="modal-head">
+      <div>
+        <p class="modal-kicker" id="person-modal-kind"></p>
+        <h3 id="person-modal-title"></h3>
+      </div>
+      <button class="modal-close" type="button" data-close aria-label="Kapat">×</button>
+    </div>
+    <div class="modal-body">
+      <div class="view-toggle" role="group" aria-label="Görünüm">
+        <button type="button" data-view="list" aria-pressed="true">Liste görünümü</button>
+        <button type="button" data-view="calendar" aria-pressed="false">Takvim görünümü</button>
+      </div>
+      <div id="person-modal-content"></div>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="exam-modal" aria-labelledby="exam-modal-title">
+    <div class="modal-head">
+      <div>
+        <p class="modal-kicker" id="exam-modal-kind"></p>
+        <h3 id="exam-modal-title"></h3>
+      </div>
+      <button class="modal-close" type="button" data-close aria-label="Kapat">×</button>
+    </div>
+    <div class="modal-body">
+      <div class="view-toggle" role="group" aria-label="Kart bölümü">
+        <button type="button" data-tab="exam" aria-pressed="true">Sınav</button>
+        <button type="button" data-tab="envelope" aria-pressed="false">Zarf</button>
+      </div>
+      <div id="exam-modal-content"></div>
+    </div>
+  </dialog>
 
   <footer class="site-footer">
     <div class="footer-inner">İESU İYBF Sınav Planlama Komisyonu; bu uygulamayı geliştiren Arş. Gör. Melih Mert Oskay’a ve değerli katkılarıyla destek veren Arş. Gör. Umut Saraç’a teşekkür eder.</div>
@@ -844,7 +995,7 @@
         : "";
       const totalStudents = exam.totalStudents !== "" ? esc(exam.totalStudents) : "Belirtilmemiş";
 
-      return '<article class="exam-card">' +
+      return '<article class="exam-card" data-exam-id="' + esc(exam.id) + '">' +
         '<div class="exam-main">' +
           '<div class="exam-time"><span class="detail-label">Saat</span>' + esc(exam.start) + '–' + esc(exam.end) + '</div>' +
           '<div>' +
@@ -942,109 +1093,179 @@
       });
     }
 
-    function personCounts(type) {
-      const counts = {};
-      if (type === "teacher") {
-        DATA.teachers.forEach(function (name) {
-          counts[name] = DATA.exams.filter(function (exam) { return exam.teacher === name; }).length;
-        });
-      } else {
-        DATA.proctors.forEach(function (name) {
-          counts[name] = new Set(DATA.assignments.filter(function (item) {
-            return item.proctor === name;
-          }).map(function (item) { return item.examId; })).size;
-        });
-      }
-      return counts;
+    function examById(id) {
+      return DATA.exams.find(function (exam) { return exam.id === id; });
     }
 
-    function initDirectory(config) {
-      const names = config.names;
-      const list = $(config.list);
-      const detail = $(config.detail);
-      const search = $(config.search);
-      const reset = config.reset ? $(config.reset) : null;
-      const selectionStatus = config.selectionStatus ? $(config.selectionStatus) : null;
-      const counts = personCounts(config.type);
-      const selected = new Set();
+    function examOrder(a, b) {
+      return (a.date + a.start).localeCompare(b.date + b.start);
+    }
 
-      function renderList(query) {
-        const normalized = trLower(query);
-        const filtered = names.filter(function (name) {
-          return trLower(name).indexOf(normalized) !== -1;
-        });
-        if (!filtered.length) {
-          list.innerHTML = '<div class="empty-list">Aramanızla eşleşen isim bulunamadı.</div>';
-          return;
-        }
-        list.innerHTML = filtered.map(function (name) {
-          return '<button class="person-button" type="button" data-name="' + esc(name) + '" aria-pressed="' + String(selected.has(name)) + '">' +
-            '<span>' + esc(name) + '</span><span class="person-count">' + counts[name] + '</span>' +
-          '</button>';
-        }).join("");
+    function inDepartment(exam, code) {
+      return exam.programs.some(function (program) { return program.indexOf(code + "-") === 0; });
+    }
+
+    // Kişinin sınavları; derslik: öğretim üyesinde sınavın bütün derslikleri, gözetmende görevli olduğu derslik(ler)
+    function personExams(type, name) {
+      if (type === "teacher") {
+        return DATA.exams.filter(function (exam) { return exam.teacher === name; }).map(function (exam) {
+          return { exam: exam, rooms: exam.rooms.map(function (room) { return room.room; }).filter(Boolean) };
+        }).sort(function (a, b) { return examOrder(a.exam, b.exam); });
       }
-
-      function renderDetail() {
-        const selectedNames = Array.from(selected);
-        if (reset) reset.disabled = selectedNames.length === 0;
-        if (selectionStatus) {
-          selectionStatus.textContent = selectedNames.length
-            ? selectedNames.length + " öğretim üyesi seçildi"
-            : "Seçim yapılmadı";
-        }
-
-        if (!selectedNames.length) {
-          const personLabel = config.type === "teacher" ? "Öğretim üyesi" : "Gözetmen";
-          const instruction = config.multiple
-            ? "Soldaki listeden bir veya birden fazla isim seçin."
-            : "Soldaki listeden bir isme tıklayın.";
-          detail.innerHTML = '<div class="placeholder"><div><strong>' + personLabel + ' seçin</strong>' + instruction + '</div></div>';
-          return;
-        }
-
-        let items;
-        if (config.type === "teacher") {
-          items = DATA.exams.filter(function (exam) { return selected.has(exam.teacher); });
-        } else {
-          const examIds = new Set(DATA.assignments.filter(function (item) {
-            return selected.has(item.proctor);
-          }).map(function (item) { return item.examId; }));
-          items = DATA.exams.filter(function (exam) { return examIds.has(exam.id); });
-        }
-
-        const title = selectedNames.length === 1
-          ? selectedNames[0]
-          : selectedNames.length + " öğretim üyesi: " + selectedNames.join(", ");
-        detail.innerHTML = selectionHeader(title, items.length, "sınav") +
-          scheduleHtml(items, examCardHtml);
-      }
-
-      renderList("");
-      search.addEventListener("input", function () { renderList(search.value); });
-      list.addEventListener("click", function (event) {
-        const button = event.target.closest(".person-button");
-        if (!button) return;
-        const name = button.dataset.name;
-        if (config.multiple) {
-          if (selected.has(name)) selected.delete(name);
-          else selected.add(name);
-        } else {
-          selected.clear();
-          selected.add(name);
-        }
-        renderList(search.value);
-        renderDetail();
-        if (window.innerWidth <= 820) {
-          detail.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
+      const roomsByExam = {};
+      DATA.assignments.forEach(function (item) {
+        if (item.proctor !== name) return;
+        (roomsByExam[item.examId] = roomsByExam[item.examId] || []).push(item.room);
       });
-      if (reset) {
-        reset.addEventListener("click", function () {
-          selected.clear();
-          renderList(search.value);
-          renderDetail();
+      return DATA.exams.filter(function (exam) { return roomsByExam[exam.id]; }).map(function (exam) {
+        return { exam: exam, rooms: roomsByExam[exam.id] };
+      }).sort(function (a, b) { return examOrder(a.exam, b.exam); });
+    }
+
+    function courseListHtml(entries) {
+      if (!entries.length) return '<div class="empty-list">Programda sınav bulunmuyor.</div>';
+      return '<ul class="course-list">' + entries.map(function (entry) {
+        return '<li><button class="course-row" type="button" data-exam-id="' + esc(entry.exam.id) + '">' + esc(entry.exam.course) + '</button></li>';
+      }).join("") + '</ul>';
+    }
+
+    // Haftalık takvim: satırlarda saatler, sütunlarda günler (programdaki bütün gün ve saatler)
+    function weekHtml(entries) {
+      const days = [];
+      DATA.exams.slice().sort(examOrder).forEach(function (exam) {
+        if (!days.some(function (day) { return day.date === exam.date; })) days.push(exam);
+      });
+      const times = Array.from(new Set(DATA.exams.map(function (exam) { return exam.start; }))).sort();
+      return '<div class="week-wrap"><table class="week-table"><thead><tr><th></th>' + days.map(function (day) {
+        return '<th>' + esc(day.day) + '<small>' + esc(day.dateLabel.slice(0, 5)) + '</small></th>';
+      }).join("") + '</tr></thead><tbody>' + times.map(function (time) {
+        return '<tr><th>' + esc(time) + '</th>' + days.map(function (day) {
+          return '<td>' + entries.filter(function (entry) {
+            return entry.exam.date === day.date && entry.exam.start === time;
+          }).map(function (entry) {
+            return '<button class="cal-item" type="button" data-exam-id="' + esc(entry.exam.id) + '">' +
+              '<strong>' + esc(entry.exam.course) + '</strong><span>' + esc(entry.rooms.join(", ")) + '</span></button>';
+          }).join("") + '</td>';
+        }).join("") + '</tr>';
+      }).join("") + '</tbody></table></div>';
+    }
+
+    function envelopeHtml() {
+      const steps = [
+        "Dersi veren öğretim elemanı tüm sınav belgelerini hazırlayıp bölüm zarf sorumlusuna teslim etti.",
+        "Bölüm zarf sorumlusu sınav zarfını kontrol edip sınav zarfları arşiv dolabına koydu. <span class=\"cabinet\">Dolap: —</span>",
+        "Fakülte sınav zarf komisyonu zarfı kontrol etti."
+      ];
+      return '<p class="envelope-title">Sınav zarfı takibi <span class="dev-badge">(geliştirme aşamasında)</span></p>' +
+        '<ol class="envelope-list">' + steps.map(function (step, index) {
+          return '<li><input type="checkbox" disabled aria-label="Adım ' + (index + 1) + '"><span>' + (index + 1) + '. ' + step + '</span></li>';
+        }).join("") + '</ol>';
+    }
+
+    function openModal(modal) {
+      if (!modal.open) modal.showModal();
+      $(".modal-body", modal).scrollTop = 0;
+    }
+
+    let currentExam = null;
+    let examTab = "exam";
+
+    function renderExamModal() {
+      $$("#exam-modal [data-tab]").forEach(function (button) {
+        button.setAttribute("aria-pressed", String(button.dataset.tab === examTab));
+      });
+      $("#exam-modal-content").innerHTML = examTab === "exam" ? examCardHtml(currentExam) : envelopeHtml();
+    }
+
+    function openExam(id) {
+      currentExam = examById(id);
+      if (!currentExam) return;
+      examTab = "exam";
+      $("#exam-modal-kind").textContent = currentExam.courseCode || "Sınav";
+      $("#exam-modal-title").textContent = currentExam.course;
+      renderExamModal();
+      openModal($("#exam-modal"));
+    }
+
+    let currentPerson = null;
+    let personView = "list";
+
+    function renderPersonModal() {
+      $$("#person-modal [data-view]").forEach(function (button) {
+        button.setAttribute("aria-pressed", String(button.dataset.view === personView));
+      });
+      const entries = personExams(currentPerson.type, currentPerson.name);
+      $("#person-modal-content").innerHTML = personView === "list" ? courseListHtml(entries) : weekHtml(entries);
+    }
+
+    function openPerson(type, name) {
+      currentPerson = { type: type, name: name };
+      $("#person-modal-kind").textContent = type === "teacher" ? "Öğretim üyesi" : "Gözetmen";
+      $("#person-modal-title").textContent = name;
+      renderPersonModal();
+      openModal($("#person-modal"));
+    }
+
+    function initModals() {
+      $$(".modal").forEach(function (modal) {
+        modal.addEventListener("click", function (event) {
+          // kartın dışına (arka plana) ya da kapat düğmesine tıklayınca kapanır
+          if (event.target === modal || event.target.closest("[data-close]")) modal.close();
         });
+      });
+      $("#person-modal").addEventListener("click", function (event) {
+        const viewButton = event.target.closest("[data-view]");
+        if (viewButton) {
+          personView = viewButton.dataset.view;
+          renderPersonModal();
+          return;
+        }
+        const examButton = event.target.closest("[data-exam-id]");
+        if (examButton) openExam(examButton.dataset.examId);
+      });
+      $("#exam-modal").addEventListener("click", function (event) {
+        const tabButton = event.target.closest("[data-tab]");
+        if (!tabButton) return;
+        examTab = tabButton.dataset.tab;
+        renderExamModal();
+      });
+      $("#department-detail").addEventListener("click", function (event) {
+        const card = event.target.closest(".exam-card[data-exam-id]");
+        if (card) openExam(card.dataset.examId);
+      });
+    }
+
+    function initPeople(config) {
+      const grid = $(config.grid);
+      const search = $(config.search);
+      const dept = $(config.dept);
+      const departmentsOf = {};
+      config.names.forEach(function (name) {
+        departmentsOf[name] = DATA.departments.filter(function (department) {
+          return personExams(config.type, name).some(function (entry) { return inDepartment(entry.exam, department.code); });
+        }).map(function (department) { return department.code; });
+      });
+      dept.innerHTML = '<option value="">Tüm bölümler</option>' + DATA.departments.map(function (department) {
+        return '<option value="' + esc(department.code) + '">' + esc(department.name) + '</option>';
+      }).join("");
+
+      function render() {
+        const query = trLower(search.value);
+        const filtered = config.names.filter(function (name) {
+          return trLower(name).indexOf(query) !== -1 && (!dept.value || departmentsOf[name].indexOf(dept.value) !== -1);
+        });
+        grid.innerHTML = filtered.length ? filtered.map(function (name) {
+          return '<button class="name-card" type="button" data-name="' + esc(name) + '">' + esc(name) + '</button>';
+        }).join("") : '<div class="empty-list">Filtreyle eşleşen isim bulunamadı.</div>';
       }
+
+      render();
+      search.addEventListener("input", render);
+      dept.addEventListener("change", render);
+      grid.addEventListener("click", function (event) {
+        const card = event.target.closest(".name-card");
+        if (card) openPerson(config.type, card.dataset.name);
+      });
     }
 
     $("#schedule-summary").textContent = DATA.meta.examCount + " sınav · " + DATA.meta.period;
@@ -1052,23 +1273,9 @@
     $("#proctor-summary").textContent = DATA.meta.proctorCount + " gözetmen";
 
     initDepartments();
-    initDirectory({
-      type: "teacher",
-      names: DATA.teachers,
-      list: "#teacher-list",
-      detail: "#teacher-detail",
-      search: "#teacher-search",
-      reset: "#teacher-reset",
-      selectionStatus: "#teacher-selection-status",
-      multiple: true
-    });
-    initDirectory({
-      type: "proctor",
-      names: DATA.proctors,
-      list: "#proctor-list",
-      detail: "#proctor-detail",
-      search: "#proctor-search"
-    });
+    initModals();
+    initPeople({ type: "teacher", names: DATA.teachers, grid: "#teacher-grid", search: "#teacher-search", dept: "#teacher-dept" });
+    initPeople({ type: "proctor", names: DATA.proctors, grid: "#proctor-grid", search: "#proctor-search", dept: "#proctor-dept" });
 
     const initialHash = location.hash.replace("#", "");
     const pageByHash = {

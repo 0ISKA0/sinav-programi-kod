@@ -628,12 +628,6 @@ def web_sitesi(dersler, program):
         ('const accessError = document.querySelector("#access-error");',
          'const accessError = document.querySelector("#access-error");\n'
          '    (function () { var u = document.getElementById("js-uyari"); if (u) u.hidden = true; })();'),
-        # gözetmenlerin kaç sınava girdiği herkese açık sekmede görünmesin
-        ("'<span>' + esc(name) + '</span><span class=\"person-count\">' + counts[name] + '</span>' +",
-         "'<span>' + esc(name) + '</span>' + (config.type === \"teacher\" ? '<span class=\"person-count\">' + counts[name] + '</span>' : '') +"),
-        ('detail.innerHTML = selectionHeader(title, items.length, "sınav") +',
-         'detail.innerHTML = selectionHeader(title, config.type === "teacher" ? items.length : "", '
-         'config.type === "teacher" ? "sınav" : "Görevli olduğu sınavlar") +'),
     ]
     for a, b in degis:
         assert h.count(a) == 1, a[:50]
