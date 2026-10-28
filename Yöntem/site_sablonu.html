@@ -846,11 +846,6 @@
         <span class="summary-pill" id="schedule-summary"></span>
       </div>
       <div class="department-grid" id="department-grid"></div>
-      <div class="detail-panel" id="department-detail">
-        <div class="placeholder">
-          <div><strong>Bölümünüzü seçin</strong>Yukarıdaki bölüm düğmelerinden birine tıklayın.</div>
-        </div>
-      </div>
     </section>
 
     <section class="page" id="page-teachers" role="tabpanel" aria-labelledby="tab-teachers" hidden>
@@ -1087,20 +1082,7 @@
 
       grid.addEventListener("click", function (event) {
         const button = event.target.closest(".department-button");
-        if (!button) return;
-        $$(".department-button", grid).forEach(function (item) {
-          item.setAttribute("aria-pressed", String(item === button));
-        });
-        const department = DATA.departments.find(function (item) { return item.code === button.dataset.code; });
-        const exams = DATA.exams.filter(function (exam) {
-          return exam.programs.some(function (program) {
-            return program.indexOf(department.code + "-") === 0;
-          });
-        });
-        const target = $("#department-detail");
-        target.innerHTML = selectionHeader(department.name, exams.length, "sınav") +
-          scheduleHtml(exams, function (exam) { return examCardHtml(exam); });
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        if (button) openPerson("department", button.dataset.code);
       });
     }
 
@@ -1118,6 +1100,11 @@
 
     // Kişinin sınavları; derslik: öğretim üyesinde sınavın bütün derslikleri, gözetmende görevli olduğu derslik(ler)
     function personExams(type, name) {
+      if (type === "department") {
+        return DATA.exams.filter(function (exam) { return inDepartment(exam, name); }).map(function (exam) {
+          return { exam: exam, rooms: exam.rooms.map(function (room) { return room.room; }).filter(Boolean) };
+        }).sort(function (a, b) { return examOrder(a.exam, b.exam); });
+      }
       if (type === "teacher") {
         return DATA.exams.filter(function (exam) { return exam.teacher === name; }).map(function (exam) {
           return { exam: exam, rooms: exam.rooms.map(function (room) { return room.room; }).filter(Boolean) };
@@ -1217,8 +1204,9 @@
 
     function openPerson(type, name) {
       currentPerson = { type: type, name: name };
-      $("#person-modal-kind").textContent = type === "teacher" ? "Öğretim üyesi" : "Gözetmen";
-      $("#person-modal-title").textContent = name;
+      const department = DATA.departments.find(function (item) { return item.code === name; });
+      $("#person-modal-kind").textContent = { teacher: "Öğretim üyesi", proctor: "Gözetmen", department: "Bölüm sınav programı" }[type];
+      $("#person-modal-title").textContent = type === "department" ? department.name : name;
       renderPersonModal();
       openModal($("#person-modal"));
     }
@@ -1249,10 +1237,6 @@
         if (!tabButton) return;
         examTab = tabButton.dataset.tab;
         renderExamModal();
-      });
-      $("#department-detail").addEventListener("click", function (event) {
-        const card = event.target.closest(".exam-card[data-exam-id]");
-        if (card) openExam(card.dataset.examId);
       });
     }
 
