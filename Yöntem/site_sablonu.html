@@ -782,9 +782,11 @@
       text-align: left;
       cursor: pointer;
     }
+    .cal-item { overflow-wrap: anywhere; hyphens: auto; }
     .cal-item:last-child { margin-bottom: 0; }
     .cal-item strong { display: block; font-size: .8rem; line-height: 1.25; }
     .cal-item span { display: block; margin-top: 2px; color: var(--muted); font-size: .75rem; font-weight: 700; }
+    .cal-item em { display: block; margin-top: 2px; color: var(--ink); font-size: .74rem; font-style: normal; }
     .cal-item:hover { background: #d6eaf8; }
 
     #exam-modal .exam-card { border: 0; box-shadow: none; padding: 0; }
@@ -1120,21 +1122,22 @@
       }).sort(function (a, b) { return examOrder(a.exam, b.exam); });
     }
 
-    function courseListHtml(entries) {
+    function courseListHtml(entries, showTeacher) {
       if (!entries.length) return '<div class="empty-list">Programda sınav bulunmuyor.</div>';
       return '<div class="week-wrap"><table class="course-table"><thead><tr>' +
-        '<th>Gün</th><th>Saat</th><th>Derslik</th><th>Ders adı</th></tr></thead><tbody>' + entries.map(function (entry) {
+        '<th>Gün</th><th>Saat</th><th>Derslik</th><th>Ders adı</th>' + (showTeacher ? '<th>Öğretim elemanı</th>' : '') + '</tr></thead><tbody>' + entries.map(function (entry) {
         const exam = entry.exam;
         return '<tr data-exam-id="' + esc(exam.id) + '" tabindex="0">' +
           '<td>' + esc(exam.day) + ' <small>' + esc(exam.dateLabel.slice(0, 5)) + '</small></td>' +
           '<td>' + esc(exam.start) + '–' + esc(exam.end) + '</td>' +
           '<td>' + esc(entry.rooms.join(", ")) + '</td>' +
-          '<td><strong>' + esc(exam.course) + '</strong></td></tr>';
+          '<td><strong>' + esc(exam.course) + '</strong></td>' +
+          (showTeacher ? '<td>' + esc(exam.teacher) + '</td>' : '') + '</tr>';
       }).join("") + '</tbody></table></div>';
     }
 
     // Haftalık takvim: satırlarda saatler, sütunlarda günler (programdaki bütün gün ve saatler)
-    function weekHtml(entries) {
+    function weekHtml(entries, showTeacher) {
       const days = [];
       DATA.exams.slice().sort(examOrder).forEach(function (exam) {
         if (!days.some(function (day) { return day.date === exam.date; })) days.push(exam);
@@ -1148,7 +1151,8 @@
             return entry.exam.date === day.date && entry.exam.start === time;
           }).map(function (entry) {
             return '<button class="cal-item" type="button" data-exam-id="' + esc(entry.exam.id) + '">' +
-              '<strong>' + esc(entry.exam.course) + '</strong><span>' + esc(entry.rooms.join(", ")) + '</span></button>';
+              '<strong>' + esc(entry.exam.course) + '</strong><span>' + esc(entry.rooms.join(", ")) + '</span>' +
+              (showTeacher ? '<em>' + esc(entry.exam.teacher) + '</em>' : '') + '</button>';
           }).join("") + '</td>';
         }).join("") + '</tr>';
       }).join("") + '</tbody></table></div>';
@@ -1199,7 +1203,8 @@
         button.setAttribute("aria-pressed", String(button.dataset.view === personView));
       });
       const entries = personExams(currentPerson.type, currentPerson.name);
-      $("#person-modal-content").innerHTML = personView === "list" ? courseListHtml(entries) : weekHtml(entries);
+      const showTeacher = currentPerson.type !== "teacher";   // öğretim üyesinin kendi kartında tekrar yazılmaz
+      $("#person-modal-content").innerHTML = personView === "list" ? courseListHtml(entries, showTeacher) : weekHtml(entries, showTeacher);
     }
 
     function openPerson(type, name) {
